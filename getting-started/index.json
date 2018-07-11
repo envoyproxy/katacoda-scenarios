@@ -4,16 +4,20 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Create Routing Config",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Start Proxy",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Secure Proxy",
         "text": "step3.md"
+      },
+      {
+        "title": "Route to Docker Containers",
+        "text": "step4.md"
       }
     ],
     "intro": {
@@ -23,6 +27,7 @@
       "text": "finish.md"
     }
   },
+  "files": ["envoy.yaml"],
   "environment": {
     "uilayout": "editor-terminal"
   },
