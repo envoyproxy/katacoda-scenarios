@@ -39,4 +39,4 @@
     tls_context: { sni: www.google.com }
 </pre>
 
-https://github.com/envoyproxy/envoy/blob/master/configs/google_com_proxy.v2.yaml
+[View full configuration on Github](https://github.com/envoyproxy/envoy/blob/6a578630a8f6189f86bc1e6b4b4d7ebffabadadd/configs/google_com_proxy.v2.yaml)
