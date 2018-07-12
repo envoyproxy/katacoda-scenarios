@@ -1,7 +1,5 @@
 ## Configuration 
 
-`cd ~/root/envoy/examples/front-proxy`{{execute}}
-
 `examples/front-proxy/docker-compose.yml`{{open}}
 
 `examples/front-proxy/front-envoy.yaml`{{open}}
