@@ -2,20 +2,21 @@
 
 `cd ~/root/envoy/examples/front-proxy`{{execute}}
 
-`/root/envoy/examples/front-proxy/docker-compose.yaml`{{open}}
+`examples/front-proxy/docker-compose.yml`{{open}}
 
-`/root/envoy/examples/front-proxy/front-envoy.yaml`{{open}}
+`examples/front-proxy/front-envoy.yaml`{{open}}
 
-`/root/envoy/examples/front-proxy/service-envoy.yaml`{{open}}
+`examples/front-proxy/service-envoy.yaml`{{open}}
 
 
 ## Deploy 
 
-`docker-compose -f ~/envoy/examples/front-proxy/docker-compose.yaml up -d`{{execute}}
+`docker-compose -f ~/envoy/examples/front-proxy/docker-compose.yml up -d`{{execute}}
 
 ## View
 
-https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/
+Admin: https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/config_dump
+https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/clusters
 
 
 https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com/service/1
