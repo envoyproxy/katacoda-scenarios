@@ -4,7 +4,7 @@
   "details": {
     "steps": [
       {
-        "title": "Create Routing Config",
+        "title": "Create Proxy Config",
         "text": "step1.md"
       },
       {
@@ -12,7 +12,7 @@
         "text": "step2.md"
       },
       {
-        "title": "Secure Proxy",
+        "title": "Admin View",
         "text": "step3.md"
       },
       {
