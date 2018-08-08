@@ -2,11 +2,11 @@ Envoy is configured using a YAML definition defining the proxies behaviour. In t
 
 Envoy supports Dynamic Configuration which enables the settings to be discovered via an external source. 
 
-##Resources
+## Resources
 
 The first line of the Envoy configuration defines the API configuration being used. In this case, we're configuring the Static API meaning the first line should be *static_resources*. Copy the snippet to the editor.
 
-<pre class="file"  data-filename="envoy.yaml" data-target="append">static_resources:</pre>
+<pre class="file"  data-filename="envoy.yaml" data-target="replace">static_resources:</pre>
 
 ## Listeners
 
