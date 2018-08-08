@@ -40,11 +40,13 @@ Start the example using Docker Compose command below:
 
 ## Admin View
 
-Once started, you can view the admin interface.
+Once started, you can view the admin interface at https://2886795346-8001-cykoria03.environments.katacoda.com/
 
-You can view the routing configuration at https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/config_dump
+You can view the routing configuration as JSON at https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/config_dump
 
-Other pages have additional information, such as the clusters available https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/clusters
+Other pages have additional information, such as the clusters available and their metrics with https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/clusters
+
+More metrics from the server can be discovered at https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/stats
 
 ## Application Routing
 
@@ -53,3 +55,5 @@ With Envoy listening on port 8000, requests can be made. Based on the URL used, 
 `curl localhost:8000/service/1`{{execute}}
 
 `curl localhost:8000/service/2`{{execute}}
+
+You should see the metrics changing. What information is being shown and how would this be helpful in production?

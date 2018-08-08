@@ -46,7 +46,7 @@ Filtering is defined using *filter_chains*. The aim of each *filter* is to find 
 </pre>
 
 The filter become is using *envoy.http_connection_manager*, a built-in filter designed for HTTP connections. The details are as follows:
-* stat_prefix: The human-readable prefix to use when emitting statistics for the connection manager. The value *ingress_http* is...
+* stat_prefix: The human-readable prefix to use when emitting statistics for the connection manager. 
 
 * route_config: The configuration for the route. If the virtual hosts matches then the route is checked. In this example, the route_config matches all incoming HTTP requests, no matter the host domain requested. 
 
@@ -74,6 +74,17 @@ Copy the cluster implementation to complete the configuration.
     tls_context: { sni: www.google.com }
 </pre>
 
+## Admin
+
+Finally an admin section is required. The admin section will be explained in more details in the following steps. 
+
+<pre class="file"  data-filename="envoy.yaml" data-target="append">admin:
+  access_log_path: /tmp/admin_access.log
+  address:
+    socket_address: { address: 0.0.0.0, port_value: 9901 }
+</pre>
+
 This structure defines the boilerplate for Envoy Static Configuration. The listener defines the ports and IP address for Envoy. The listener has a set of filters to match on the incoming requests. Once a request is matched, it will be forwarded to a cluster.
 
 You can view the full configuration on [Github](https://github.com/envoyproxy/envoy/blob/6a578630a8f6189f86bc1e6b4b4d7ebffabadadd/configs/google_com_proxy.v2.yaml)
+
