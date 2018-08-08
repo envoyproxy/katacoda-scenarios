@@ -13,3 +13,4 @@ Below will launch the Proxy, bound to port 80.
 Once started, you should be able to send HTTP requests to Port 80 with `curl localhost`{{execute}}
 
 You can view this via your local browser with the URL https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+As you will see the request is proxied to Google.com and you should see the Google homepage without the URL changing.

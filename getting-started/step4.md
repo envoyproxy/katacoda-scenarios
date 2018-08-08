@@ -2,13 +2,13 @@ The final example uses Envoy to proxy traffic to different Python services  base
 
 ## Configuration 
 
-The configuration of the application is defined as a Docker Compose file. 
+The configuration of the application is defined as a Docker Compose file (we use a Docker Compose file because we want to run several containers simultaneously, one for the proxy and also one for each of the individual services).
 
 You can view the file by clicking `examples/front-proxy/docker-compose.yml`{{open}}
 
 ## Application
 
-The services is a Python web application. It also uses Envoy within the container to forward traffic to the Python application. Having Envoy in-front of the application is not required.
+The service is a Python web applications, which also uses Envoy within the container to forward traffic to the Python application. Having Envoy in-front of the application is not required.
 
 `examples/front-proxy/service.py`{{open}}
 

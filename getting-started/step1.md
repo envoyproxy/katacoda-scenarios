@@ -1,6 +1,6 @@
-Envoy is configured using a YAML definition defining the proxies behaviour. In this step, we're building a configuring using the Static Configuration API, meaning all the settings are pre-defined within the configuration. 
+Envoy is configured using a YAML definition file controlling the proxy's behaviour. In this step, we're building a configuring using the Static Configuration API, meaning all the settings are pre-defined within the configuration. 
 
-Envoy supports Dynamic Configuration which enables the settings to be discovered via an external source. 
+Envoy also supports Dynamic Configuration which enables the settings to be discovered via an external source. 
 
 ## Resources
 
@@ -10,7 +10,7 @@ The first line of the Envoy configuration defines the API configuration being us
 
 ## Listeners
 
-The beginning of the configuration defines the *Listeners*. A listener is the networking configuration, such as IP address and Ports, that Envoy listens for requests. Envoy runs inside of a Docker Container meaning it needs to listen on the IP address **0.0.0.0**. In this case, Envoy will listen on port **10000**. 
+The beginning of the configuration defines the *Listeners*. A listener is the networking configuration, such as IP address and Ports, that Envoy listens to for requests. Envoy runs inside of a Docker Container meaning it needs to listen on the IP address **0.0.0.0**. In this case, Envoy will listen on port **10000**. 
 
 Below is the configuration to define this setup. Copy the snippet to the editor.
 
@@ -22,11 +22,11 @@ Below is the configuration to define this setup. Copy the snippet to the editor.
 
 ## Filter Chains and Fliters
 
-With Envoy listening for incoming traffic, the next stage is to define how to process for requests. Each Listener has a set of filters. Different listeners can have a different set of filters. 
+With Envoy listening for incoming traffic, the next stage is to define how to process the requests. Each Listener has a set of filters and different listeners can have a different set of filters. 
 
 In this example, we'll proxy all traffic to Google.com (thanks Google!). The result is we should be able to request the Envoy endpoint and see the Google homepage appear, without the URL changing.
 
-Filtering is defined using *filter_chains*. The aim of each *filter* is to find a match on the inputting request, to match it to the target destination. Copy the snippet to the editor.
+Filtering is defined using *filter_chains*. The aim of each *filter* is to find a match on the incoming request, to match it to the target destination. Copy the snippet to the editor.
 
 <pre class="file"  data-filename="envoy.yaml" data-target="append">    filter_chains:
     - filters:
@@ -45,12 +45,12 @@ Filtering is defined using *filter_chains*. The aim of each *filter* is to find 
           - name: envoy.router
 </pre>
 
-The filter become is using *envoy.http_connection_manager*, a built-in filter designed for HTTP connections. The details are as follows:
+The filter is using *envoy.http_connection_manager*, a built-in filter designed for HTTP connections. The details are as follows:
 * stat_prefix: The human-readable prefix to use when emitting statistics for the connection manager. 
 
 * route_config: The configuration for the route. If the virtual hosts matches then the route is checked. In this example, the route_config matches all incoming HTTP requests, no matter the host domain requested. 
 
-* routes: If the URL prefix is matched then a set of route rules defines what should happen next.
+* routes: If the URL prefix is matched then a set of route rules defines what should happen next. In this case "/" means match the root of the request
 
 * host_rewrite: Change the inbound Host header for the HTTP request.
 
@@ -60,7 +60,7 @@ The filter become is using *envoy.http_connection_manager*, a built-in filter de
 
 ## Clusters
 
-When a filter is matched, it will pass the request to a cluster. The cluster below defines that the host is google.com running over HTTPS. If multiple hosts had been defined, then Envoy would perform a Round Robin strategy. 
+When a request matches a filter, the request is passed onto a cluster. The cluster shown below defines that the host is google.com running over HTTPS. If multiple hosts had been defined, then Envoy would perform a Round Robin strategy. 
 
 Copy the cluster implementation to complete the configuration.
 
@@ -76,7 +76,7 @@ Copy the cluster implementation to complete the configuration.
 
 ## Admin
 
-Finally an admin section is required. The admin section will be explained in more details in the following steps. 
+Finally an admin section is required. The admin section will be explained in more detail in the subsequent steps. 
 
 <pre class="file"  data-filename="envoy.yaml" data-target="append">admin:
   access_log_path: /tmp/admin_access.log

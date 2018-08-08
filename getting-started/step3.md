@@ -1,6 +1,6 @@
 Envoy provides an administration view, allowing you to view configuration, stats, logs and other internal Envoy data.
 
-At the end of the proxy, an Admin section was added. The admin can be defined by adding an additional resource definition. The definition defines the port which the admin view is available on. The port should not conflict with other listener configurations.
+The admin can be defined by adding an additional resource definition. The definition defines the port which the admin view is available on. The port should not conflict with other listener configurations.
 
 <pre class="file">admin:
   access_log_path: /tmp/admin_access.log
