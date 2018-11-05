@@ -40,7 +40,7 @@ Start the example using Docker Compose command below:
 
 ## Admin View
 
-Once started, you can view the admin interface at https://2886795346-8001-cykoria03.environments.katacoda.com/
+Once started, you can view the admin interface at https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/
 
 You can view the routing configuration as JSON at https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/config_dump
 
