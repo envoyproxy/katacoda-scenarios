@@ -1,6 +1,7 @@
 {
   "title": "Getting Started with Envoy",
   "description": "Learn how to configure Envoy Proxy using a static configuration",
+  "icon": "fa-envoyproxy",
   "details": {
     "steps": [
       {
@@ -29,7 +30,8 @@
   },
   "files": ["envoy.yaml"],
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+    "hideuieditortree": true
   },
   "backend": {
     "imageid": "envoy-docker"
