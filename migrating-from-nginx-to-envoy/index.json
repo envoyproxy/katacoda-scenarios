@@ -1,0 +1,48 @@
+{
+  "title": "Migrating from NGINX to Envoy Proxy",
+  "description": "Learn how to migrate NGINX configuration to Envoy Proxy",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - NGINX Example",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - Virtual Host Configuration",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - Location Configuration",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Proxy and Upstream Configuration",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Logging Access and Errors",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - Server Configuration",
+        "text": "step6.md"
+      },
+      {
+        "title": "Step 7 - Launching and Updating",
+        "text": "step7.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "envoy-docker"
+  }
+}

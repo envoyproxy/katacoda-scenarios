@@ -1,0 +1,44 @@
+{
+  "title": "Migrating from HAProxy to Envoy Proxy",
+  "description": "Learn how to migrate HAProxy configuration to Envoy Proxy",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - HAProxy Example",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - Server Configuration",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - Load Balancer Configuration",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Logging Access and Errors",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Monitoring",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - Launching and Updating",
+        "text": "step6.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "envoy-docker"
+  }
+}
