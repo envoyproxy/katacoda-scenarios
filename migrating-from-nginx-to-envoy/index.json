@@ -1,6 +1,7 @@
 {
   "title": "Migrating from NGINX to Envoy Proxy",
   "description": "Learn how to migrate NGINX configuration to Envoy Proxy",
+  "icon": "fa-envoyproxy",
   "details": {
     "steps": [
       {

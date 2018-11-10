@@ -1,6 +1,7 @@
 {
   "title": "Migrating from HAProxy to Envoy Proxy",
   "description": "Learn how to migrate HAProxy configuration to Envoy Proxy",
+  "icon": "fa-envoyproxy",
   "details": {
     "steps": [
       {

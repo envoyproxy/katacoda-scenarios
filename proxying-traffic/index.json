@@ -1,6 +1,7 @@
 {
   "title": "Proxying Traffic with Envoy Proxy",
   "description": "Learn how to configure Listeners, Filters, Routes and Clusters to proxy traffic",
+  "icon": "fa-envoyproxy",
   "details": {
     "steps": [
       {
