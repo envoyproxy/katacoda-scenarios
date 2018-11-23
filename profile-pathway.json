@@ -20,6 +20,31 @@
         "description": "Learn how to migrate HAProxy configuration to Envoy Proxy",
         "id": "migrating-from-haproxy-to-envoy"
       },
+      {
+        "title": "Securing traffic with HTTPS and SSL/TLS",
+        "description": "Learn how to use SSL certificates with Envoy",
+        "id": "securing-traffic-with-https"
+      },
+      {
+        "title": "Controlling load balancing policies",
+        "description": "Learn how to configure load balancing techniques",
+        "id": "load-balancing"
+      },
+      {
+        "title": "Implementing Blue / Green rollouts",
+        "description": "Manage Canary releases for your applications using Envoy Proxy",
+        "id": "blue-green-deployments"
+      },
+      {
+        "title": "Dynamic Routing Configuration",
+        "description": "Learn how to dynamically route traffic to available Docker containers",
+        "id": "dynamic-routing-configuration"
+      },
+      {
+        "title": "Debugging Envoy Proxy",
+        "description": "Understand how to use the Envoy admin control panel to identify potential problems",
+        "id": "debugging-envoy-proxy"
+      }
     ]
   }
   

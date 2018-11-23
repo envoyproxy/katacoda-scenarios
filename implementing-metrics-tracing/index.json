@@ -1,24 +1,20 @@
 {
-  "title": "Securing traffic with HTTPS and SSL/TLS",
-  "description": "Learn how to use SSL certificates with Envoy",
+  "title": "Implementing Metrics and Tracing Capabilies",
+  "description": "Gain visibility into production traffic with Metrics and Tracing",
   "icon": "fa-envoyproxy",
   "details": {
     "steps": [
       {
-        "title": "Step 1 - SSL Certificates",
+        "title": "Step 1",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - Securing Traffic",
+        "title": "Step 2",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Redirecting HTTP Traffic",
+        "title": "Step 3",
         "text": "step3.md"
-      },
-      {
-        "title": "Step 4 - Start Proxy",
-        "text": "step4.md"
       }
     ],
     "intro": {
