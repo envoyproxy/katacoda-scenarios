@@ -9,23 +9,23 @@
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - Virtual Host Configuration",
+        "title": "Step 2 - NGINX Configuration",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Location Configuration",
+        "title": "Step 3 - Server Configuration",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Proxy and Upstream Configuration",
+        "title": "Step 4 - Location Configuration",
         "text": "step4.md"
       },
       {
-        "title": "Step 5 - Logging Access and Errors",
+        "title": "Step 5 - Proxy and Upstream Configuration",
         "text": "step5.md"
       },
       {
-        "title": "Step 6 - Server Configuration",
+        "title": "Step 6 - Logging Access and Errors",
         "text": "step6.md"
       },
       {

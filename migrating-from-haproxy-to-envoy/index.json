@@ -9,11 +9,11 @@
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - Server Configuration",
+        "title": "Step 2 - Frontend Configuration",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Load Balancer Configuration",
+        "title": "Step 3 - Backend Configuration",
         "text": "step3.md"
       },
       {
@@ -21,12 +21,8 @@
         "text": "step4.md"
       },
       {
-        "title": "Step 5 - Monitoring",
+        "title": "Step 5 - Launching and Hot Reloading",
         "text": "step5.md"
-      },
-      {
-        "title": "Step 6 - Launching and Updating",
-        "text": "step6.md"
       }
     ],
     "intro": {

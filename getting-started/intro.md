@@ -2,6 +2,12 @@
 
 The scenario aims to demonstrate how to configure Envoy as a proxy, allowing you to forward traffic to different destinations. 
 
-You will learn how to configure two types of proxies. One will forward traffic to external websites and another which will forward traffic to Docker Containers based on the URL path defined. 
+In this scenario you will learn how to:
+    
+* Configure Envoy Proxy to forward traffic to external websites
 
-Once the Envoy proxy is in place, it can be extended to support load balancing, health checking and metrics.
+* Configure Envoy Proxy to forward traffic to Docker Containers 
+
+* Path based routing for controlling traffic destination
+
+Once the Envoy proxy is in place, it can be extended to support load balancing, health checking and metrics that are discussed in more advanced scenarios. 
