@@ -12,8 +12,8 @@ events {
 }
 </pre>
 
-Envoy Proxy manages the worker processes and connections differently... TODO: Explain Envoy Process  
+Envoy Proxy manages the worker processes and connections differently... TODO: Explain Envoy Process  - https://blog.envoyproxy.io/envoy-threading-model-a8d44b922310
 
 ## HTTP Configuration
 
-The next block of configuration defines the HTTP settings, such as which mine types are supported, default timeouts and gzip configuration. These aspects are configured via Filters.
+The next block of NGINX configuration defines the HTTP settings, such as which mine types are supported, default timeouts and gzip configuration. These aspects are configured via Filters within Envoy Proxy which we will be discussed in a later step. 

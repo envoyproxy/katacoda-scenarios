@@ -38,8 +38,14 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+        "host01": [
+            {"file": "nginx.conf", "target": "/root/"}
+        ]
     }
   },
+  "files": ["envoy.yaml"],
   "environment": {
     "uilayout": "editor-terminal"
   },
