@@ -13,7 +13,7 @@ The most important aspect to start with Envoy Proxy is defining the listers. Thi
 
 The snippet below will create a new listener and bind it to port 8080. This indicates to Envoy Proxy which ports it should be bind to for incoming requests.
 
-<pre class="file" data-filename="envoy.yaml">
+<pre class="file" data-filename="envoy.yaml" data-target="replace">
 static_resources:
   listeners:
   - name: listener_0

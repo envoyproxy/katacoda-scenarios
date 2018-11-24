@@ -3,10 +3,10 @@ The final configuration required is the logging. Instead of piping the error log
 The path can be either a device, such as stdout, or a file on disk depending on your requirements.
 
 <pre class="file" data-target="clipboard">
-          access_log:
-          - name: envoy.file_access_log
-            config:
-              path: "/dev/stdout"
+access_log:
+- name: envoy.file_access_log
+  config:
+    path: "/dev/stdout"
 </pre>
 
 For example:
@@ -36,21 +36,21 @@ This outputs
 
 Can also be outputted as JSON, for example:
 <pre class="file">
-          access_log:
-          - name: envoy.file_access_log
-            config:
-              path: "/dev/stdout"
-              format: "%REQ(X-ENVOY-ORIGINAL-PATH?:PATH)% %PROTOCOL%"
+access_log:
+- name: envoy.file_access_log
+  config:
+    path: "/dev/stdout"
+    format: "[%START_TIME%] "%REQ(:METHOD)% %REQ(X-ENVOY-ORIGINAL-PATH?:PATH)% %PROTOCOL%" %RESPONSE_CODE% %RESP(X-ENVOY-UPSTREAM-SERVICE-TIME)% "%REQ(X-REQUEST-ID)%" "%REQ(:AUTHORITY)%" "%UPSTREAM_HOST%"\n"
 </pre>
 
 
 Can also be outputted as JSON, for example:
 <pre class="file">
-          access_log:
-          - name: envoy.file_access_log
-            config:
-              path: "/dev/stdout"
-              json_format: {"protocol": "%PROTOCOL%", "duration": "%DURATION%", "request_method": "%REQ(:METHOD)%"}
+access_log:
+- name: envoy.file_access_log
+  config:
+    path: "/dev/stdout"
+    json_format: {"protocol": "%PROTOCOL%", "duration": "%DURATION%", "request_method": "%REQ(:METHOD)%"}
 </pre>
 
 More info at https://www.envoyproxy.io/docs/envoy/latest/configuration/access_log#config-access-log-format-dictionaries
