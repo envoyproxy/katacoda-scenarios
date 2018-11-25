@@ -55,4 +55,4 @@ access_log:
 
 More info at https://www.envoyproxy.io/docs/envoy/latest/configuration/access_log#config-access-log-format-dictionaries
 
-Envoy Proxy includes additional functionality to include tracing of requests. To learn more, read the [tracing documentation]().
+Envoy Proxy includes additional functionality to include tracing of requests. To learn more, read the [tracing documentation](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/tracing).

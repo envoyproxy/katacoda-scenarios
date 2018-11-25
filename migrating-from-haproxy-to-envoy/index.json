@@ -21,8 +21,12 @@
         "text": "step4.md"
       },
       {
-        "title": "Step 5 - Launching and Hot Reloading",
+        "title": "Step 5 - Launching",
         "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - Hot Restart",
+        "text": "step6.md"
       }
     ],
     "intro": {
@@ -30,7 +34,12 @@
     },
     "finish": {
       "text": "finish.md"
-    }
+    },
+    "assets": {
+      "host01": [
+          {"file": "haproxy.cfg", "target": "/root/"}
+      ]
+  }
   },
   "environment": {
     "uilayout": "editor-terminal"

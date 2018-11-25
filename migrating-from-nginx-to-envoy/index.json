@@ -29,8 +29,12 @@
         "text": "step6.md"
       },
       {
-        "title": "Step 7 - Launching and Updating",
+        "title": "Step 7 - Launching",
         "text": "step7.md"
+      },
+      {
+        "title": "Step 8 - Hot Restart",
+        "text": "step8.md"
       }
     ],
     "intro": {
