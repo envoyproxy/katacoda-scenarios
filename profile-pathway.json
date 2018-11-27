@@ -6,11 +6,6 @@
         "id": "getting-started"
       },
       {
-        "title": "Proxying Traffic with Envoy Proxy",
-        "description": "Learn how to configure Listeners, Filters, Routes and Clusters to proxy traffic",
-        "id": "proxying-traffic"
-      },
-      {
         "title": "Migrating from NGINX to Envoy Proxy",
         "description": "Learn how to migrate NGINX configuration to Envoy Proxy",
         "id": "migrating-from-nginx-to-envoy"
@@ -39,6 +34,11 @@
         "title": "Dynamic Routing Configuration",
         "description": "Learn how to dynamically route traffic to available Docker containers",
         "id": "dynamic-routing-configuration"
+      },
+      {
+        "title": "Implementing Metrics and Tracing Capabilies",
+        "description": "Gain visibility into production traffic with Metrics and Tracing",
+        "id": "implementing-metrics-tracing"
       },
       {
         "title": "Debugging Envoy Proxy",
