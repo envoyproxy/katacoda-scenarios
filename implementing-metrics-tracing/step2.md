@@ -1,3 +1,4 @@
+<pre class="file" data-filename="envoy.yaml" data-target="placeholder">
 tracing:
   http:
     name: envoy.dynamic.ot
@@ -17,3 +18,4 @@ tracing:
         baggage_restrictions:
           denyBaggageOnInitializationFailure: false
           hostPort: ""
+</pre>

@@ -5,16 +5,24 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - Deploy Envoy and Service",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - Add New Service",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Canary Release",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Rollout 20% Traffic",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Rollout 100% Traffic",
+        "text": "step5.md"
       }
     ],
     "intro": {

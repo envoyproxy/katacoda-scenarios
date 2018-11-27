@@ -5,23 +5,41 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - Proxy Configuration",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - Add Health Check",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Start Prroxy",
         "text": "step3.md"
-      }
+      },
+      {
+        "title": "Step 4 - Failed Services",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Healthy Services",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - Total Failure",
+        "text": "step6.md"
+      },
     ],
     "intro": {
       "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+        "host01": [
+            {"file": "envoy.yaml", "target": "/root/envoy"},
+            {"file": "envoy-completed.yaml", "target": "/root/envoy"}
+        ]
     }
   },
   "environment": {

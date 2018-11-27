@@ -14,8 +14,7 @@ static_resources:
             virtual_hosts:
             - name: backend
               domains:
-                - "one.example.com"
-                - "www.one.example.com"
+                - "*"
               routes:
               - match:
                   prefix: "/"
@@ -33,8 +32,11 @@ static_resources:
       { socket_address: { address: 172.18.0.3, port_value: 80 }},
       { socket_address: { address: 172.18.0.4, port_value: 80 }}
     ]
-
-admin:
-  access_log_path: /tmp/admin_access.log
-  address:
-    socket_address: { address: 0.0.0.0, port_value: 9090 }
+    health_checks:
+      - timeout: 1s
+        interval: 10s
+        interval_jitter: 1s
+        unhealthy_threshold: 6
+        healthy_threshold: 1
+        http_health_check:
+          path: "/health"

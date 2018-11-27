@@ -1,0 +1,3 @@
+With a static, file based configuration running inside of a Docker Container, to make changes to the configuration.
+
+Instead, Envoy Proxy has a series of Dynamic Configuration approaches that allow configuration to be loaded dynamically from a file, or via an API. This allows Envoy to automatically reload updates based on external feedback. This makes it much easier to implement within a Cloud Native system such as Kubernetes or Istio.

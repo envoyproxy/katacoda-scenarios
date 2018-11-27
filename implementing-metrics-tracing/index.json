@@ -5,23 +5,41 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - Adding Metrics",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - Adding Tracing",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Starting Services",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Generating Traffic",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Viewing Metrics",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - Viewing Teacing",
+        "text": "step6.md"
       }
     ],
     "intro": {
+      "courseData": "env-init.sh",
       "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+        "host01": [
+            {"file": "envoy.yaml", "target": "/root/envoy"}
+        ]
     }
   },
   "environment": {

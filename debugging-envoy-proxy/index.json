@@ -5,16 +5,24 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - Start Envoy",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - Logs",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Upstream Node Unavailable",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Domain Not Found",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Community",
+        "text": "step-contact.md"
       }
     ],
     "intro": {
