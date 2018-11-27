@@ -16,4 +16,4 @@ Envoy Proxy manages the worker processes and connections differently... TODO: Ex
 
 ## HTTP Configuration
 
-The next block of NGINX configuration defines the HTTP settings, such as which mine types are supported, default timeouts and gzip configuration. These aspects are configured via Filters within Envoy Proxy which we will be discussed in a later step. 
+The next block of NGINX configuration defines the HTTP settings, such as which mine types are supported, default timeouts and gzip configuration. These aspects are configured via Filters within Envoy Proxy which we will be discussed in a later step.

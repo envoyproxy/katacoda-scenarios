@@ -6,7 +6,6 @@ Within the HTTP configuration block, the NGINX configuration specifies to listen
     server_name   one.example.com  www.one.example.com;
 </pre>
 
-
 ## Envoy Listeners
 
 The most important aspect to start with Envoy Proxy is defining the listers. This is where we need to start creating our configuration file that defines how we want to run our envoy instance.

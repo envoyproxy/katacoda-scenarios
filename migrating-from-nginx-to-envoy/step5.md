@@ -10,7 +10,7 @@ Within NGINX, the upstream configuration defines the set of target servers that 
 
 ## Envoy Cluster
 
-The equiviant of upstream is defined as Clusters. In this case, the hosts have been defined. The way the hosts are accessed, such as the timeouts are defined as the cluster configuration. This allows finer gain control over aspects such as timeouts and load balancing.
+The equivalent of upstream is defined as Clusters. In this case, the hosts have been defined. The way the hosts are accessed, such as the timeouts are defined as the cluster configuration. This allows finer gain control over aspects such as timeouts and load balancing.
 
 <pre class="file" data-filename="envoy.yaml">
   clusters:

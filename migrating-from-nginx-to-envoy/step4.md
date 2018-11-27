@@ -9,10 +9,9 @@ location / {
 }
 </pre>
 
-
 ## Envoy Filterers
 
-For the static configuration, the filters define how to handle incoming requests. In this case we are defining the filters that matches the *server_names* in the previous step. When requests are made that match the defined domains and routes, the traffic will be forwarded to the cluster. This is the equviaint of the upstream configuration. 
+For the static configuration, the filters define how to handle incoming requests. In this case we are defining the filters that matches the *server_names* in the previous step. When requests are made that match the defined domains and routes, the traffic will be forwarded to the cluster. This is the equivalent of the upstream configuration.
 
 <pre class="file" data-filename="envoy.yaml">
     filter_chains:

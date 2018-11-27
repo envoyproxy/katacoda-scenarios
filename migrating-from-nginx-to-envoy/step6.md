@@ -22,7 +22,6 @@ For example:
           route_config:
 </pre>
 
-
 Default format string of
 
 `[%START_TIME%] "%REQ(:METHOD)% %REQ(X-ENVOY-ORIGINAL-PATH?:PATH)% %PROTOCOL%"
@@ -42,7 +41,6 @@ access_log:
     path: "/dev/stdout"
     format: "[%START_TIME%] "%REQ(:METHOD)% %REQ(X-ENVOY-ORIGINAL-PATH?:PATH)% %PROTOCOL%" %RESPONSE_CODE% %RESP(X-ENVOY-UPSTREAM-SERVICE-TIME)% "%REQ(X-REQUEST-ID)%" "%REQ(:AUTHORITY)%" "%UPSTREAM_HOST%"\n"
 </pre>
-
 
 Can also be outputted as JSON, for example:
 <pre class="file">
