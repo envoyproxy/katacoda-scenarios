@@ -7,7 +7,6 @@ access_log:
     path: "/dev/stdout"
 </pre>
 
-
 `docker run -d katacoda/docker-http-server; docker run -d katacoda/docker-http-server;`{{execute T1}}
 
 `curl -H localhost -i`{{execute T1}}

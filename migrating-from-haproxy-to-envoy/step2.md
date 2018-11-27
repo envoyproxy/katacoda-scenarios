@@ -9,7 +9,7 @@ frontend localnodes
 
 ## Envoy Listeners
 
-Within Envoy, the binding of configuration is defined as Listeners. Each listerner can define a port and a series of filters, routes and clusters that respond on that port. In this case, there is one listener defined bound to port 8080.
+Within Envoy, the binding of configuration is defined as Listeners. Each listener can define a port and a series of filters, routes and clusters that respond on that port. In this case, there is one listener defined bound to port 8080.
 
 <pre class="file" data-filename="envoy.yaml" data-target="replace">
 static_resources:
