@@ -25,4 +25,6 @@ The equivalent of upstream is defined as Clusters. In this case, the hosts have 
     ]
 </pre>
 
-The type **STRICT_DNS** refers to...
+When using **STRICT_DNS** service discovery, Envoy will continuously and asynchronously resolve the specified DNS targets. Each returned IP address in the DNS result will be considered an explicit host in the upstream cluster. This means that if the query returns two IP addresses, Envoy will assume the cluster has two hosts, and both should be load balanced to. If a host is removed from the result Envoy assumes it no longer exists and will drain traffic from any existing connection pools.
+
+More information can be found [here](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/service_discovery#strict-dns).
