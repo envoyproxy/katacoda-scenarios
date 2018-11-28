@@ -12,7 +12,13 @@ events {
 }
 </pre>
 
-Envoy Proxy manages the worker processes and connections differently... TODO: Explain Envoy Process  - https://blog.envoyproxy.io/envoy-threading-model-a8d44b922310
+Envoy Proxy manages the worker processes and connections differently.
+
+Envoy spawns a worker thread for every hardware thread in the system. Each worker thread runs a non-blocking event loop that is responsible for listening on every listener, accepting new connections, instantiating a filter stack for the connection, and processing all IO for the lifetime of the connection.  All further handling of the connection is entirely processed within the worker thread, including any forwarding behaviour.
+
+All connection pools in Envoy are per worker thread. Though HTTP/2 connection pools only make a single connection to each upstream host at a time, if there are four workers, there will be four HTTP/2 connections per upstream host at steady state.  Keeping everything within a single worker thread, almost all the code can be written without locks and as if it is single threaded.  Having more workers than is needed will waste memory, create more idle connections, and lead to a lower connection pool hit rate.
+
+More information can be found [here](https://blog.envoyproxy.io/envoy-threading-model-a8d44b922310).
 
 ## HTTP Configuration
 
