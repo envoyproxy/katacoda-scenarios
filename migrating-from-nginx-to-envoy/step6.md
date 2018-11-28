@@ -2,7 +2,8 @@ The final configuration required is the logging. Instead of piping the error log
 
 The access logs when users make a request is optional and disabled by default. To enable access logs for HTTP requests, include an `access_log` configuration for the HTTP Connection Manager. The path can be either a device, such as stdout, or a file on disk depending on your requirements.
 
-The following configuration will pipe all access logs to `stdout`. Copy the snippet into the config section for the connection manager. 
+The following configuration will pipe all access logs to `stdout`. Copy the snippet into the config section for the connection manager.
+
 <pre class="file" data-target="clipboard">
 access_log:
 - name: envoy.file_access_log
