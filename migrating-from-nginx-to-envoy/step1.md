@@ -1,4 +1,4 @@
-This scenario uses a example nginx.conf based on the full example from the [NGINX wiki](https://www.nginx.com/resources/wiki/start/topics/examples/fullexample2/). The configuration can be viewed in the editor by opening `nginx.conf`{{open}}
+This scenario uses a crafted nginx.conf based on the full example from the [NGINX wiki](https://www.nginx.com/resources/wiki/start/topics/examples/fullexample2/). The configuration can be viewed in the editor by opening `nginx.conf`{{open}}
 
 NGINX configurations generally have three key elements.
 
@@ -6,11 +6,11 @@ NGINX configurations generally have three key elements.
 
 2) Configure NGINX to accept requests for _one.example.com_ host on port 8080.
 
-3) Configure location of how to handle traffic to different parts of the URL.
+3) Configure the target location of how to handle traffic to different parts of the URL.
 
 Not all of the configuration will apply to Envoy Proxy, and certain aspects will not be required to be configured. Envoy Proxy has four key types that support the core infrastructure offered by NGINX. The core is:
 
-* **Listeners:** Listeners define how Envoy Proxy accepts incoming requests. At present, Envoy Proxy only supports TCP based listeners. Once a connection is made, it is based to a set of filters for processing.
+* **Listeners:** Listeners define how Envoy Proxy accepts incoming requests. At present, Envoy Proxy only supports TCP based listeners. Once a connection is made, it is passed on to a set of filters for processing.
 
 * **Filters:** Filters are part of a pipeline architecture that can process inbound and outbound data. This functionality enables filters such as GZip which compresses data before sending it to the client.
 

@@ -18,7 +18,7 @@ Envoy spawns a worker thread for every hardware thread in the system. Each worke
 
 All connection pools in Envoy are per worker thread. Though HTTP/2 connection pools only make a single connection to each upstream host at a time, if there are four workers, there will be four HTTP/2 connections per upstream host at steady state.  Keeping everything within a single worker thread, almost all the code can be written without locks and as if it is single threaded.  Having more workers than is needed will waste memory, create more idle connections, and lead to a lower connection pool hit rate.
 
-More information can be found [here](https://blog.envoyproxy.io/envoy-threading-model-a8d44b922310).
+More information can be found on the [Envoy Proxy blog](https://blog.envoyproxy.io/envoy-threading-model-a8d44b922310).
 
 ## HTTP Configuration
 

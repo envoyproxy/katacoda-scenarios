@@ -8,6 +8,4 @@ In this scenario you will learn how to:
 
 * Configure access and error logs
 
-* Hot Reload configuration to support zero downtime updates
-
 At the end of the scenario, you will have an understanding of the core Envoy Proxy functionality, and how you can migrate existing NGINX scripts to the platform.

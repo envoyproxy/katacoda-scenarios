@@ -6,12 +6,13 @@ Within the HTTP configuration block, the NGINX configuration specifies to listen
     server_name   one.example.com  www.one.example.com;
 </pre>
 
+Within Envoy, this is managed by Listeners.
 
 ## Envoy Listeners
 
-The most important aspect to start with Envoy Proxy is defining the listers. This is where we need to start creating our configuration file that defines how we want to run our envoy instance.
+The most important aspect of starting with Envoy Proxy is defining the listers. We need to start creating our configuration file that describes how we want to run our envoy instance.
 
-The snippet below will create a new listener and bind it to port 8080. This indicates to Envoy Proxy which ports it should be bind to for incoming requests.
+The snippet below will create a new listener and bind it to port 8080. The configuration indicates to Envoy Proxy which ports it should be bind to for incoming requests.
 
 <pre class="file" data-filename="envoy.yaml" data-target="replace">
 static_resources:

@@ -1,3 +1,4 @@
+When a request comes into NGINX a location block defines how to process and where to forward the traffic. In the following snippet, all the traffic to the site is proxied to an upstream cluster called `targetCluster`. The upstream cluster defines the nodes that should process the request, which will be discussed in the next step.
 
 <pre class="file">
 location / {
@@ -9,10 +10,11 @@ location / {
 }
 </pre>
 
+Within Envoy, this is managed by Filters.
 
 ## Envoy Filterers
 
-For the static configuration, the filters define how to handle incoming requests. In this case we are defining the filters that matches the *server_names* in the previous step. When requests are made that match the defined domains and routes, the traffic will be forwarded to the cluster. This is the equviaint of the upstream configuration. 
+For the static configuration, the filters define how to handle incoming requests. In this case, we are setting the filters that match the *server_names* in the previous step. When incoming requests are received that match the defined domains and routes, the traffic will be forwarded to the cluster. This is the equivalent of the upstream configuration. 
 
 <pre class="file" data-filename="envoy.yaml">
     filter_chains:
