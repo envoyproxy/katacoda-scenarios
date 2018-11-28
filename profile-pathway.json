@@ -26,9 +26,9 @@
         "id": "dynamic-routing-configuration"
       },
       {
-        "title": "Controlling load balancing policies",
-        "description": "Learn how to configure load balancing techniques",
-        "id": "load-balancing"
+        "title": "Detecting unavailable services using health checks",
+        "description": "Understand how health checking ensures traffic goes to healthy services",
+        "id": "detecting-service-health-with-healthchecks"
       },
       {
         "title": "Implementing Blue / Green rollouts",
