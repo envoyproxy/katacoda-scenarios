@@ -1,4 +1,4 @@
-Within the HTTP configuration block, the HA Proxy configuration listeners on port 8080 and all traffic are handled by the backend nodes. 
+Within the HTTP configuration block, the HA Proxy configuration listens on port 8080 and all traffic is handled by the backend nodes.
 
 <pre class="file">
 frontend localnodes
