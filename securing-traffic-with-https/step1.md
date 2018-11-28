@@ -2,7 +2,7 @@ For testing purposes the command below will generate a self-signed certificate f
 
 ## Generate Certificate
 
-The command below creates a new certificate and key within a directory calls certs/.
+The command below creates a new certificate and key within a directory calls certs/. It sets the domain to **example.com**.
 
 ```
 mkdir certs; cd certs; 
