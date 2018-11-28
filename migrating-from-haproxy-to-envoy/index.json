@@ -36,8 +36,9 @@
           {"file": "haproxy.cfg", "target": "/root/"},
           {"file": "completed.yaml", "target": "/root/"}
       ]
-  }
+    }
   },
+  "files": ["envoy.yaml"],
   "environment": {
     "uilayout": "editor-terminal"
   },

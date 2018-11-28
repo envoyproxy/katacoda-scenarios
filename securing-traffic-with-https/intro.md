@@ -1,4 +1,4 @@
-This scenario demonostrates how to secure HTTP traffic with Envoy Proxy. Securing HTTP traffic is critical to protect users privacy and data.
+This scenario demonstrates how to secure HTTP traffic with Envoy Proxy. Securing HTTP traffic is critical to protecting users privacy and data.
 
 In this scenario you will learn how to:
 
