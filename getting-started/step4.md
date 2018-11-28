@@ -1,6 +1,6 @@
 The final example uses Envoy to proxy traffic to different Python services  based on the requested URL path. 
 
-## Configuration 
+## Configuration
 
 The configuration of the application is defined as a Docker Compose file (we use a Docker Compose file because we want to run several containers simultaneously, one for the proxy and also one for each of the individual services).
 
@@ -17,7 +17,7 @@ The service is a Python web applications, which also uses Envoy within the conta
 
 The Envoy proxy configuration is defined in `examples/front-proxy/front-envoy.yaml`{{open}}
 
-As described in the first step, the configuration starts by defining a set of static_resources. The routes match based on the URL of the request. 
+As described in the first step, the configuration starts by defining a set of static_resources. The routes match based on the URL of the request.
 
 <pre class="file">routes:
     - match:
@@ -32,7 +32,7 @@ As described in the first step, the configuration starts by defining a set of st
 
 The cluster configuration forwards traffic to endpoints called _service1_ and _service2_, these are DNS entries provided by the Docker Network configured with Docker Compose.
 
-## Deploy 
+## Deploy
 
 Start the example using Docker Compose command below:
 

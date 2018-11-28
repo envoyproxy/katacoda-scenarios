@@ -17,5 +17,3 @@ Email Address []:founders@example.com
 Envoy Proxy requires both the key and crt file.
 
 When deploying into production, you will need certificates generated for your site from a service such as [Let’s Encrypt](https://letsencrypt.org).
-
-

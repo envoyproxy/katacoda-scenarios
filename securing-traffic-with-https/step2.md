@@ -2,7 +2,6 @@ To secure traffic, the addition of a **tls_context** is required as a filter. Th
 
 In this case, the certificates are our self-signed generated in the first step. 
 
-
 //TODO: Move to using Place Holders
 <pre>
 tls_context:

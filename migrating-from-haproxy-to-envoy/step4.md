@@ -75,4 +75,3 @@ More info at https://www.envoyproxy.io/docs/envoy/latest/configuration/access_lo
 Envoy Proxy includes additional functionality to include tracing of requests. To learn more, read the [tracing documentation](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/tracing).
 
 Users are defined when the process launches, discussed in the next step.
-
