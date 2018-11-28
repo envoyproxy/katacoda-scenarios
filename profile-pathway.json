@@ -21,6 +21,11 @@
         "id": "securing-traffic-with-https"
       },
       {
+        "title": "Dynamic Routing Configuration",
+        "description": "Learn how to dynamically update configuration to route traffic",
+        "id": "dynamic-routing-configuration"
+      },
+      {
         "title": "Controlling load balancing policies",
         "description": "Learn how to configure load balancing techniques",
         "id": "load-balancing"
@@ -29,11 +34,6 @@
         "title": "Implementing Blue / Green rollouts",
         "description": "Manage Canary releases for your applications using Envoy Proxy",
         "id": "blue-green-deployments"
-      },
-      {
-        "title": "Dynamic Routing Configuration",
-        "description": "Learn how to dynamically route traffic to available Docker containers",
-        "id": "dynamic-routing-configuration"
       },
       {
         "title": "Implementing Metrics and Tracing Capabilies",
