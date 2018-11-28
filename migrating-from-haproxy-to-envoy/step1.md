@@ -6,7 +6,7 @@ An example HA Proxy configuration can be viewed in the editor by opening `haprox
 
 3) Configure the location of how to process the traffic.
 
-Not all of the configuration will apply to Envoy Proxy with certain aspects not being required due to different architecture and decisions. Envoy Proxy has four key types that support the core infrastructure offered by HA Proxy. The core is:
+Not all of the configuration will apply to Envoy Proxy with certain aspects not being required due to different architecture and decisions. Envoy Proxy has four key types that support the core infrastructure offered by HA Proxy. The core are:
 
 * **Listeners:** Listeners define how Envoy Proxy accepts incoming requests. At present, Envoy Proxy only supports TCP based listeners. Once a connection is made, it is based on a set of filters for processing.
 
