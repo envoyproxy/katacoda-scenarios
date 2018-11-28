@@ -4,11 +4,11 @@ An example HA Proxy configuration can be viewed in the editor by opening `haprox
 
 2) Configure HA Proxy to accept incoming requests.
 
-3) Configure location of how to process the traffic.
+3) Configure the location of how to process the traffic.
 
 Not all of the configuration will apply to Envoy Proxy with certain aspects not being required due to different architecture and decisions. Envoy Proxy has four key types that support the core infrastructure offered by HA Proxy. The core is:
 
-* **Listeners:** Listeners define how Envoy Proxy accepts incoming requests. At present, Envoy Proxy only supports TCP based listeners. Once a connection is made, it is based to a set of filters for processing.
+* **Listeners:** Listeners define how Envoy Proxy accepts incoming requests. At present, Envoy Proxy only supports TCP based listeners. Once a connection is made, it is based on a set of filters for processing.
 
 * **Filters:** Filters are part of a pipeline architecture that can process inbound and outbound data. This functionality enables filters such as GZip which compresses data before sending it to the client.
 

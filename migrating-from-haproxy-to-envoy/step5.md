@@ -1,4 +1,4 @@
-The Envoy Proxy configuration has now been translated from HA Proxy. The final part is to launch it.
+The Envoy Proxy configuration has now been translated from HA Proxy. The final section is to launch the Envoy Proxy instance to test it.
 
 ## Run As User
 
@@ -14,15 +14,23 @@ Below will launch Envoy Proxy via a Docker Container on the host. The command ex
 
 ## Testing
 
-`curl -H localhost -i`{{execute T1}}
+With the Proxy started, tests can now be made and processed. The following cURL command issues a request with the Host Header defined in the proxy configuration.
 
-This will result in a _503_ error because the upstream connections are not running or available.
+`curl -H "Host: one.example.com" localhost -i`{{execute T1}}
+
+The HTTP request will result in a _503_ error because the upstream connections are not running and unavailable. As such, Envoy Proxy has no available target destinations for the request. The following command will launch a series of HTTP services that match the configuration defined for Envoy. 
 
 `docker run -d katacoda/docker-http-server; docker run -d katacoda/docker-http-server;`{{execute T1}}
 
-`curl -H localhost -i`{{execute T1}}
+With the services available, Envoy can successfully proxy traffic to the target destination.
 
-Additional headers...
+`curl -H "Host: one.example.com" localhost -i`{{execute T1}}
+
+You should see a response indicating which Docker Container processed the request. Within the Envoy Proxy logs you should also see the access line outputted.
+
+## Additional HTTP Response Headers
+
+Within the response headers of the valid request you will see additional HTTP Headers. The Header contains the time in milliseconds spent by the upstream host processing the request. This is useful if the client wants to determine service time compared to network latency. 
 
 ```
 x-envoy-upstream-service-time: 0

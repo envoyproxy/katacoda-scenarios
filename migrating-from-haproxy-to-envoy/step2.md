@@ -1,4 +1,4 @@
-Within the HTTP configuration block, the HA Proxy configuration listenes on port 8080 and all traffic is handled by the backend nodes. 
+Within the HTTP configuration block, the HA Proxy configuration listeners on port 8080 and all traffic are handled by the backend nodes. 
 
 <pre class="file">
 frontend localnodes
@@ -7,9 +7,11 @@ frontend localnodes
     default_backend nodes
 </pre>
 
+Within Envoy Proxy, this concept is handled by Listeners.
+
 ## Envoy Listeners
 
-Within Envoy, the binding of configuration is defined as Listeners. Each listener can define a port and a series of filters, routes and clusters that respond on that port. In this case, there is one listener defined bound to port 8080.
+The Envoy binding of configuration is defined as Listeners. Each listener can define a port and a series of filters, routes and clusters that respond on that port. In this case, there is one listener defined bound to port 8080.
 
 <pre class="file" data-filename="envoy.yaml" data-target="replace">
 static_resources:

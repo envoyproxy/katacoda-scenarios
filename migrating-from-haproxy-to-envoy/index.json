@@ -23,10 +23,6 @@
       {
         "title": "Step 5 - Launching",
         "text": "step5.md"
-      },
-      {
-        "title": "Step 6 - Updating",
-        "text": "step6.md"
       }
     ],
     "intro": {
@@ -37,7 +33,8 @@
     },
     "assets": {
       "host01": [
-          {"file": "haproxy.cfg", "target": "/root/"}
+          {"file": "haproxy.cfg", "target": "/root/"},
+          {"file": "completed.yaml", "target": "/root/"}
       ]
   }
   },
