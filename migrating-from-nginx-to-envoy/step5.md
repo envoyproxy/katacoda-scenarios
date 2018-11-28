@@ -12,11 +12,7 @@ Within Envoy, this is managed by clusters.
 
 ## Envoy Cluster
 
-<<<<<<< HEAD
 The equivalent of upstream is defined as Clusters. In this case, the hosts that will serve the traffic have been defined. The way the hosts are accessed, such as the timeouts are defined as the cluster configuration. This allows finer gain control over aspects such as timeouts and load balancing.
-=======
-The equivalent of upstream is defined as Clusters. In this case, the hosts have been defined. The way the hosts are accessed, such as the timeouts are defined as the cluster configuration. This allows finer gain control over aspects such as timeouts and load balancing.
->>>>>>> remotes/priv/review
 
 <pre class="file" data-filename="envoy.yaml">
   clusters:
