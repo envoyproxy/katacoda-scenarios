@@ -1,4 +1,4 @@
-The backend configuration defines the load balancer configuration to handle the incoming traffic. In this configuration example, three nodes have been defined in a round-robin fashion.
+The backend configuration defines the load balancer configuration to handle the incoming traffic. In this configuration example, two nodes have been defined in a round-robin fashion.
 
 <pre class="file">
 backend nodes
