@@ -38,7 +38,7 @@
     },
     "assets": {
         "host01": [
-            {"file": "envoy.yaml", "target": "/root/envoy"}
+            {"file": "envoy.yaml", "target": "/root"}
         ]
     }
   },

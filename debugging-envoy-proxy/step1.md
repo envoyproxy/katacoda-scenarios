@@ -1,1 +1,1 @@
-`docker run --name proxy1 -p 80:8080 -p 9090:9090 --user 1000:1000 -v /root/envoy/envoy.yaml:/etc/envoy/envoy.yaml envoyproxy/envoy`{{execute interupt T2}}
+`docker run --name proxy1 -p 80:8080 -p 9090:9090 --user 1000:1000 -v /root/:/etc/envoy envoyproxy/envoy`{{execute interupt T2}}
