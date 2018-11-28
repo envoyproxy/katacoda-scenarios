@@ -1,6 +1,6 @@
 {
-  "title": "Detecting unavailable services using health checks",
-  "description": "Understand how health checking ensures traffic goes to healthy services",
+  "title": "Detecting Unavailable Services Using Healthchecks",
+  "description": "Understand how healthchecks ensure traffic only goes to healthy, available, services",
   "icon": "fa-envoyproxy",
   "details": {
     "steps": [
