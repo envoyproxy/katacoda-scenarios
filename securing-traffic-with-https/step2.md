@@ -8,9 +8,9 @@ tls_context:
   common_tls_context:
     tls_certificates:
       - certificate_chain:
-          filename: "/etc/certs/example-com.crt"
+          filename: "/etc/envoy/certs/example-com.crt"
         private_key:
-          filename: "/etc/certs/example-com.key"
+          filename: "/etc/envoy/certs/example-com.key"
 </pre>
 
 The completed example can be viewed at `envoy-completed.yaml`{{open}}

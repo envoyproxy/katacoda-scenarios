@@ -1,8 +1,10 @@
 For testing purposes the command below will generate a self-signed certificate for the domain example.com. This self-signed will cause warning messages but ideal for testing configuration locally.
 
-`mkdir certs; cd certs; openssl req -x509 -newkey rsa:4096 -keyout example-com.key -out example-com.crt -days 365`{{execute}}
+openssl req  -nodes -new -x509  -keyout server.key -out server.cert
 
-Certain information is required to generate a certificate. In this example, the most important example is setting the Common Name to *example.com*. Here are some example details:
+`mkdir certs; cd certs; openssl req -nodes -new -x509 -keyout example-com.key -out example-com.crt -days 365; cd -`{{execute}}
+
+Certain information is required to generate a certificate. In this example, the most important example is **setting the Common Name to *example.com***. Here are some example details:
 
 ```
 Country Name (2 letter code) []:UK
