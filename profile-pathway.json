@@ -26,8 +26,8 @@
         "id": "dynamic-routing-configuration"
       },
       {
-        "title": "Detecting unavailable services using health checks",
-        "description": "Understand how health checking ensures traffic goes to healthy services",
+        "title": "Detecting Down Services with Healthchecks",
+        "description": "Understand how healthchecks ensure traffic only goes to healthy, available, services",
         "id": "detecting-service-health-with-healthchecks"
       },
       {
