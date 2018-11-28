@@ -15,7 +15,7 @@ defaults
         option  dontlognull
 </pre>
 
-The logs for Envoy Proxy follow a cloud native approach, where the application logs are outputted to stdout and stderr. 
+The logs for Envoy Proxy follow a cloud native approach, where the application logs are outputted to stdout and stderr.
 
 User access logs are disabled by default and need to be configured. To enable access logs for HTTP requests, include an `access_log` configuration for the HTTP Connection Manager. The path can be either a device, such as stdout, or a file on disk depending on your requirements.
 
@@ -70,6 +70,6 @@ access_log:
     json_format: {"protocol": "%PROTOCOL%", "duration": "%DURATION%", "request_method": "%REQ(:METHOD)%"}
 </pre>
 
-More information on Envoy's logging approach can be found at https://www.envoyproxy.io/docs/envoy/latest/configuration/access_log#config-access-log-format-dictionaries
+More information on Envoy's logging approach can be found [here](https://www.envoyproxy.io/docs/envoy/latest/configuration/access_log#config-access-log-format-dictionaries).
 
 Logging isn't the only way to gain visibility into production with Envoy Proxy.  Advanced tracing and metrics capabilities are built into the platform. You can find out more in the [tracing documentation](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/tracing) or via the [Interactive Tracing Scenario]().
