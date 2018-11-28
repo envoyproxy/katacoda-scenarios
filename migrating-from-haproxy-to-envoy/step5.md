@@ -10,7 +10,7 @@ Envoy Proxy takes a cloud native approach to managing who the process owner is. 
 
 Below will launch Envoy Proxy via a Docker Container on the host. The command exposes Envoy to listen to incoming requests on port 80. However, as specified in the listener configuration, Envoy Proxy is listening to incoming traffic on port 8080. This allows the process to run as a low privilege user.
 
-`docker run --name proxy1 -p 80:8080 --user 1000:1000 -v /root/envoy/envoy.yaml:/etc/envoy/envoy.yaml envoyproxy/envoy`{{execute T2}}
+`docker run --name proxy1 -p 80:8080 --user 1000:1000 -v /root/envoy.yaml:/etc/envoy/envoy.yaml envoyproxy/envoy`{{execute T2}}
 
 ## Testing
 
