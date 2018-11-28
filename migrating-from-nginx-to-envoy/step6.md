@@ -57,4 +57,4 @@ access_log:
 
 More information on Envoy's logging approach can be found at https://www.envoyproxy.io/docs/envoy/latest/configuration/access_log#config-access-log-format-dictionaries
 
-Logging isn't the only way to gain visibility into production with Envoy Proxy. Built into the platform is advanced tracing and metrics capabilities. You can find out more in the [tracing documentation](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/tracing) or via the [Interactive Tracing Scenario]().
+Logging isn't the only way to gain visibility into production with Envoy Proxy. Advanced tracing and metrics capabilities are built into the platform. You can find out more in the [tracing documentation](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/tracing) or via the [Interactive Tracing Scenario]().
