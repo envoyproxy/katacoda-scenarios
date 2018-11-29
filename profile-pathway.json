@@ -21,14 +21,19 @@
         "id": "securing-traffic-with-https"
       },
       {
-        "title": "Dynamic Routing Configuration",
-        "description": "Learn how to dynamically update configuration to route traffic",
-        "id": "dynamic-routing-configuration"
+        "title": "File Based Dynamic Routing Configuration",
+        "description": "Learn how to dynamically update configuration to route traffic driven via files",
+        "id": "file-based-dynamic-routing-configuration"
       },
       {
-        "title": "Detecting Down Services with Healthchecks",
-        "description": "Understand how healthchecks ensure traffic only goes to healthy, available, services",
-        "id": "detecting-service-health-with-healthchecks"
+        "title": "API Based Dynamic Routing Configuration",
+        "description": "Learn how to dynamically update configuration to route traffic driven via an API",
+        "id": "api-based-dynamic-routing-configuration"
+      },
+      {
+        "title": "Detecting Down Services with health checks",
+        "description": "Understand how health checks ensure traffic only goes to healthy, available, services",
+        "id": "detecting-service-health-with-health checks"
       },
       {
         "title": "Implementing Blue / Green rollouts",

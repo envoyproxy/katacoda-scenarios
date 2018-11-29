@@ -1,20 +1,32 @@
 {
-  "title": "Dynamic Routing Configuration",
+  "title": "File Based Dynamic Routing Configuration",
   "description": "Learn how to dynamically route traffic to available Docker containers",
   "icon": "fa-envoyproxy",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Envoy Dynamic Routing",
+        "text": "step-explanation.md"
+      },
+      {
+        "title": "Step 1 - Cluster ID",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - EDS Configuration",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - EDS Configuration",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Start Envoy",
+        "text": "step-start.md"
+      },
+      {
+        "title": "Step 5 - Apply Changes",
+        "text": "step-changes.md"
       }
     ],
     "intro": {
