@@ -1,4 +1,5 @@
 {
+  "live": false,
   "title": "Debugging Envoy Proxy",
   "description": "Understand how to use the Envoy admin control panel to identify potential problems",
   "icon": "fa-envoyproxy",

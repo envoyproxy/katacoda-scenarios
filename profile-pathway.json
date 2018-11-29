@@ -44,11 +44,6 @@
         "title": "Implementing Metrics and Tracing Capabilities",
         "description": "Gain visibility into production traffic with Metrics and Tracing",
         "id": "implementing-metrics-tracing"
-      },
-      {
-        "title": "Debugging Envoy Proxy",
-        "description": "Understand how to use the Envoy admin control panel to identify potential problems",
-        "id": "debugging-envoy-proxy"
       }
     ]
   }
