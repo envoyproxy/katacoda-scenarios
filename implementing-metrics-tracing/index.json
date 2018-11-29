@@ -5,6 +5,10 @@
   "details": {
     "steps": [
       {
+        "title": "Step 1 - Start Envoy",
+        "text": "step-start.md"
+      },
+      {
         "title": "Step 1 - Adding Metrics",
         "text": "step1.md"
       },
@@ -13,19 +17,19 @@
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Starting Services",
+        "title": "Step 3 - Generating Traffic",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Generating Traffic",
+        "title": "Step 4 - Viewing Metrics",
         "text": "step4.md"
       },
       {
-        "title": "Step 5 - Viewing Metrics",
+        "title": "Step 5 - Dashboarding Metrics with Grafana",
         "text": "step5.md"
       },
       {
-        "title": "Step 6 - Viewing Teacing",
+        "title": "Step 6 - Viewing Tracing",
         "text": "step6.md"
       }
     ],

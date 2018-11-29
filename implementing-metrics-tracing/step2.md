@@ -1,21 +1,11 @@
-<pre class="file" data-filename="envoy.yaml" data-target="placeholder">
+<pre class="file" data-filename="envoy.yaml" data-target="append">
 tracing:
   http:
-    name: envoy.dynamic.ot
+    name: envoy.zipkin
     config:
-      library: /usr/local/lib/libjaegertracing_plugin.so
-      config:
-        service_name: service1
-        sampler:
-          type: const
-          param: 1
-        reporter:
-          localAgentHostPort: jaeger:6831
-        headers:
-          jaegerDebugHeader: jaeger-debug-id
-          jaegerBaggageHeader: jaeger-baggage
-          traceBaggageHeaderPrefix: uberctx-
-        baggage_restrictions:
-          denyBaggageOnInitializationFailure: false
-          hostPort: ""
+      collector_cluster: 172.18.0.6
+      collector_endpoint: "/api/v1/spans"
+      shared_span_context: false
 </pre>
+
+`docker run -d --name jaeger -p 5775:5775/udp -p 16686:16686 jaegertracing/all-in-one:latest`{{execute}}
