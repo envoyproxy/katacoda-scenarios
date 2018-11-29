@@ -42,7 +42,9 @@
     },
     "assets": {
         "host01": [
-            {"file": "envoy.yaml", "target": "/root"}
+            {"file": "envoy.yaml", "target": "/root"},
+            {"file": "envoy-completed.yaml", "target": "/root"},
+            {"file": "prometheus.yml", "target": "/root"}
         ]
     }
   },

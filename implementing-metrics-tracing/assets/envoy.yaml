@@ -32,6 +32,14 @@ static_resources:
       { socket_address: { address: 172.18.0.3, port_value: 80 }},
       { socket_address: { address: 172.18.0.4, port_value: 80 }}
     ]
+    health_checks:
+      - timeout: 1s
+        interval: 10s
+        interval_jitter: 1s
+        unhealthy_threshold: 6
+        healthy_threshold: 1
+        http_health_check:
+          path: "/health"
   - name: jaeger
     connect_timeout: 1s
     type: strict_dns
@@ -46,10 +54,3 @@ admin:
     socket_address:
       address: 0.0.0.0
       port_value: 9901
-tracing:
-  http:
-    name: envoy.zipkin
-    config:
-      collector_cluster: jaeger
-      collector_endpoint: "/api/v1/spans"
-      shared_span_context: false
