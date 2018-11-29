@@ -8,7 +8,7 @@ In a separate terminal window, launch a loop that will send requests. This will 
 
 With the following command, you can identify which Docker Container has the IP `172.18.0.3`. This will be the node that will become unheathy and later be removed from the load balancing rotation.
 
-`docker ps -q | xargs -n 1 docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .ID }}' | sed 's/ \// /'`{{execute T1}}
+`docker ps -q | xargs -n 1 docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .Config.Hostname }}' | sed 's/ \// /'`{{execute T1}}
 
 To make the node unheathy, call the endpoint `curl 172.18.0.3/unhealthy`{{execute T1}}
 

@@ -9,19 +9,19 @@
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - Add New Service",
+        "title": "Step 2 - Header-Based Routing",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Canary Release",
+        "title": "Step 3 - Header-Based Routing",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Rollout 20% Traffic",
+        "title": "Step 4 - Weighted Load Balancing",
         "text": "step4.md"
       },
       {
-        "title": "Step 5 - Rollout 100% Traffic",
+        "title": "Step 5 - Rollout 20% Traffic",
         "text": "step5.md"
       }
     ],
