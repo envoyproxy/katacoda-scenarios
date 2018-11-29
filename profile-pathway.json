@@ -31,17 +31,17 @@
         "id": "api-based-dynamic-routing-configuration"
       },
       {
-        "title": "Detecting Down Services with health checks",
-        "description": "Understand how health checks ensure traffic only goes to healthy, available, services",
-        "id": "detecting-service-health-with-health checks"
+        "title": "Detecting Down Services with Health Checks",
+        "description": "Understand how health checks ensure traffic only goes to healthy available services",
+        "id": "detecting-service-health-with-healthchecks"
       },
       {
-        "title": "Implementing Blue / Green rollouts",
+        "title": "Implementing Blue / Green Rollouts",
         "description": "Manage Canary releases for your applications using Envoy Proxy",
         "id": "blue-green-deployments"
       },
       {
-        "title": "Implementing Metrics and Tracing Capabilies",
+        "title": "Implementing Metrics and Tracing Capabilities",
         "description": "Gain visibility into production traffic with Metrics and Tracing",
         "id": "implementing-metrics-tracing"
       },

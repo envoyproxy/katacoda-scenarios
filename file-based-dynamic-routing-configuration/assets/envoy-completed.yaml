@@ -25,8 +25,7 @@ static_resources:
             virtual_hosts:
             - name: backend
               domains:
-                - "one.example.com"
-                - "www.one.example.com"
+                - "*"
               routes:
               - match:
                   prefix: "/"
@@ -39,7 +38,6 @@ static_resources:
     connect_timeout: 0.25s
     lb_policy: ROUND_ROBIN
     type: EDS
-    refresh_delay: 30s
     eds_cluster_config:
       service_name: localservices
       eds_config:

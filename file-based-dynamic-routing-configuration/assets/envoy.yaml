@@ -21,8 +21,7 @@ static_resources:
             virtual_hosts:
             - name: backend
               domains:
-                - "one.example.com"
-                - "www.one.example.com"
+                - "*"
               routes:
               - match:
                   prefix: "/"
