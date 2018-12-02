@@ -1,2 +1,1 @@
-# katacoda-scenarios
-Katacoda Scenarios for Envoy Proxy
+# Interactive Scenarios for Envoy Proxy
