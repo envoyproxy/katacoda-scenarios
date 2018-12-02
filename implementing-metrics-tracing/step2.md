@@ -1,4 +1,4 @@
-<pre class="file" data-filename="envoy.yaml" data-target="append">
+<pre class="file">
 tracing:
   http:
     name: envoy.zipkin

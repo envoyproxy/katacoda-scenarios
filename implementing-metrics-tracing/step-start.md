@@ -1,3 +1,5 @@
+`envoy.yaml`{{open}}
+
 ```
 docker run --name=proxy -d \
     -p 9901:9901 \

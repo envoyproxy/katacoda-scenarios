@@ -49,7 +49,14 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "showdashboard": true,
+    "dashboards": [
+      {"name": "Prometheus", "port": 9090},
+      {"name": "Grafana", "port": 3000},
+      {"name": "Envoy Stats", "href": "https://[[HOST_SUBDOMAIN]]-9901-[[KATACODA_HOST]].environments.katacoda.com/stats/prometheus"},
+      {"name": "Jaeger Tracing", "port": 16686}
+    ],
+    "uilayout": "terminal-iframe"
   },
   "backend": {
     "imageid": "envoy-docker"

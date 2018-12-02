@@ -2,7 +2,7 @@ static_resources:
   listeners:
   - name: listener_0
     address:
-      socket_address: { address: 0.0.0.0, port_value: 10000 }
+      socket_address: { address: 0.0.0.0, port_value: 8080 }
     filter_chains:
     - filters:
       - name: envoy.http_connection_manager
@@ -40,17 +40,10 @@ static_resources:
         healthy_threshold: 1
         http_health_check:
           path: "/health"
-  - name: jaeger
-    connect_timeout: 1s
-    type: strict_dns
-    lb_policy: round_robin
-    hosts:
-    - socket_address:
-        address: 172.18.0.5
-        port_value: 9411
-admin:
-  access_log_path: "/dev/null"
-  address:
-    socket_address:
-      address: 0.0.0.0
-      port_value: 9901
+  tracing:
+    http:
+      name: envoy.zipkin
+      config:
+        collector_cluster: 172.18.0.6
+        collector_endpoint: "/api/v1/spans"
+        shared_span_context: false
