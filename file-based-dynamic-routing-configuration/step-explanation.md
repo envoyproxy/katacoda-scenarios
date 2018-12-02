@@ -6,7 +6,7 @@ Envoy supports different parts of the configuration as dynamic. The APIs availab
 
 * **CDS**: The cluster discovery service (CDS) API layers on a mechanism by which Envoy can discover upstream clusters used during routing. 
 
-* **RDS**: The route discovery service (RDS) API layers on a mechanism by which Envoy can discover the entire route configuration for an HTTP connection manager filter at runtime.
+* **RDS**: The route discovery service (RDS) API layers on a mechanism by which Envoy can discover the entire route configuration for an HTTP connection manager filter at runtime. This would enable concepts such as dynamically changing traffic shifting and blue/green releases.
 
 * **LDS**: The listener discovery service (LDS) layers on a mechanism by which Envoy can discover entire listeners at runtime. 
 

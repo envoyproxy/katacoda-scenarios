@@ -5,7 +5,7 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - Deploy Envoy and Service",
+        "title": "Step 1 - Envoy Base Configuration",
         "text": "step1.md"
       },
       {
@@ -13,7 +13,7 @@
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Header-Based Routing",
+        "title": "Step 3 - Deploy Header-Based Routing",
         "text": "step3.md"
       },
       {
@@ -23,6 +23,10 @@
       {
         "title": "Step 5 - Rollout 20% Traffic",
         "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - Rollout 100% Traffic",
+        "text": "step6.md"
       }
     ],
     "intro": {
