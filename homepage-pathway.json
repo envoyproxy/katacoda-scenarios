@@ -6,7 +6,7 @@
         "external_link": "https://www.envoyproxy.io/try/getting-started",
         "description": "Learn how to configure Envoy Proxy using a static configuration",
         "title": "Getting Started with Envoy"
-      }
+      },
       {
         "title": "Migrating from NGINX to Envoy Proxy",
         "description": "Learn how to migrate NGINX configuration to Envoy Proxy",
