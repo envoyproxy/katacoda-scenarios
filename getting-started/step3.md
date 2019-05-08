@@ -1,6 +1,6 @@
 Envoy provides an administration view, allowing you to view configuration, stats, logs and other internal Envoy data.
 
-The admin can be defined by adding an additional resource definition. The definition defines the port which the admin view is available on. The port should not conflict with other listener configurations.
+The admin can be defined by adding an additional resource definition, where the port for the admin view is defined. The port should not conflict with other Listener configurations.
 
 <pre class="file">admin:
   access_log_path: /tmp/admin_access.log
@@ -10,7 +10,9 @@ The admin can be defined by adding an additional resource definition. The defini
 
 ## Start Admin
 
-This Docker Container also exposes the Admin port to the outside world. The resource configuration above will make the admin view available to the public and should only be used for demonstration purposes, see the documentation on how to secure the admin portal.
+This Docker Container also exposes the admin port to the outside world. The resource configuration above will make the admin view available to the public and should be used for demonstration purposes **only**, see the [documentation](https://www.envoyproxy.io/docs/envoy/latest/operations/admin) on how to secure the admin portal.
+
+To expose the admin portal, run the following command:
 
 `docker run --name=proxy-with-admin -d \
     -p 9901:9901 \
