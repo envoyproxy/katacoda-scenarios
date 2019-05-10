@@ -13,7 +13,7 @@ Within Envoy, this functionality is handled by creating filters and clusters.
 
 ## Envoy Filters and Clusters
 
-For the static configuration, the filters define how to handle incoming requests. In this case, we are defining the filters that match the *server_names* in the previous step. When requests are made that match the defined domains and routes, the traffic will be forwarded to the cluster. This is the equivalent of the upstream configuration.
+For the static configuration, the filters define how to handle incoming requests. In this case, we are defining the filters that match with all the traffic. When requests are made that match the defined domains and routes, the traffic is forwarded to the cluster. This is the equivalent of the upstream configuration:
 
 <pre class="file" data-filename="envoy.yaml">
     filter_chains:
@@ -37,6 +37,8 @@ For the static configuration, the filters define how to handle incoming requests
           - name: envoy.router
 </pre>
 
+The name *envoy.http_connection_manager* is a built-in filter within Envoy Proxy. Other filters include _Redis_, _Mongo_, _TCP_. You can find the complete list in the [documentation](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/listener/listener.proto#envoy-api-file-envoy-api-v2-listener-listener-proto).
+
 The filter controls how Envoy matches incoming HTTP requests and which cluster should handle them. The cluster controls which servers are handling the traffic and the load balancing configuration, such as Round Robin.
 
 <pre class="file" data-filename="envoy.yaml">
@@ -51,3 +53,5 @@ The filter controls how Envoy matches incoming HTTP requests and which cluster s
       { socket_address: { address: 172.18.0.4, port_value: 80 }}
     ]
 </pre>
+
+For more information about other load balancing policies visit the [Envoy documentation](https://www.envoyproxy.io/docs/envoy/v1.8.0/intro/arch_overview/load_balancing).

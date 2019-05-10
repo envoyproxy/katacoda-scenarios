@@ -23,4 +23,4 @@ static_resources:
       socket_address: { address: 0.0.0.0, port_value: 8080 }
 </pre>
 
-In the next step, we'll find our routes and cluster that will handle the traffic.
+In the next step, you'll find the configuration of routes and cluster that will handle the traffic.

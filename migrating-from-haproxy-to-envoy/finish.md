@@ -2,8 +2,8 @@ Congratulations! You have successfully translated an HAProxy configuration file 
 
 In this scenario you learned how to:
 
-* Configure Envoy Proxy server configuration and settings
+* Configure Envoy Proxy server configuration and settings.
 
-* Configure Envoy Proxy to proxy traffic to external services
+* Configure Envoy Proxy to proxy traffic to external services.
 
-* Configure access and error logs
+* Configure access and error logs.
