@@ -32,7 +32,7 @@ For the static configuration, the filters define how to handle incoming requests
               - match:
                   prefix: "/"
                 route:
-                  cluster: targetCluster
+                  cluster: nodes
           http_filters:
           - name: envoy.router
 </pre>
@@ -41,7 +41,7 @@ The filter controls how Envoy matches incoming HTTP requests and which cluster s
 
 <pre class="file" data-filename="envoy.yaml">
   clusters:
-  - name: targetCluster
+  - name: nodes
     connect_timeout: 0.25s
     type: STRICT_DNS
     dns_lookup_family: V4_ONLY
