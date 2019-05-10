@@ -6,14 +6,14 @@ An example HA Proxy configuration can be viewed in the editor by opening `haprox
 
 3) Configure the location of how to process the traffic.
 
-Not all of the configuration will apply to Envoy Proxy with certain aspects not being required due to different architecture and decisions. Envoy Proxy has four key types that support the core infrastructure offered by HA Proxy. The core are:
+Not all of the configuration will apply to Envoy Proxy with certain aspects not being required due to different architecture and decisions. Envoy Proxy has **four key** types that support the core infrastructure offered by HA Proxy. The core are:
 
-* **Listeners:** Listeners define how Envoy Proxy accepts incoming requests. At present, Envoy Proxy only supports TCP based listeners. Once a connection is made, it is based on a set of filters for processing.
+* **Listeners:** They define how Envoy Proxy accepts incoming requests. At present, Envoy Proxy only supports TCP-based listeners. Once a connection is made, it’s passed on to a set of filters for processing.
 
-* **Filters:** Filters are part of a pipeline architecture that can process inbound and outbound data. This functionality enables filters such as GZip which compresses data before sending it to the client.
+* **Filters:** They are part of a pipeline architecture that can process inbound and outbound data. This functionality enables filters such as Gzip which compresses data before sending it to the client.
 
-* **Routers:** Routers forward traffic to the required destination, defined as a cluster.
+* **Routers:** These forward traffic to the required destination, defined as a cluster.
 
-* **Clusters:** Clusters define the target endpoint for traffic and the configuration settings.
+* **Clusters:** They define the target endpoint for traffic and the configuration settings.
 
 We'll use these four components to create an Envoy Proxy configuration to match the HA Proxy configuration defined. Envoy's focus has been on API and dynamic configuration. In this case, the configuration will use static, hardcoded, resources as defined by HA Proxy.

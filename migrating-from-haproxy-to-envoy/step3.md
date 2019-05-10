@@ -41,9 +41,9 @@ The filter controls how Envoy matches incoming HTTP requests and which cluster s
 
 <pre class="file" data-filename="envoy.yaml">
   clusters:
-  - name: nodes
+  - name: targetCluster
     connect_timeout: 0.25s
-    type: LOGICAL_DNS
+    type: STRICT_DNS
     dns_lookup_family: V4_ONLY
     lb_policy: ROUND_ROBIN
     hosts: [

@@ -39,7 +39,6 @@ For example:
           route_config:
 </pre>
 
-
 By default, Envoy has a Format String that includes details of the HTTP request.
 
 `[%START_TIME%] "%REQ(:METHOD)% %REQ(X-ENVOY-ORIGINAL-PATH?:PATH)% %PROTOCOL%"
