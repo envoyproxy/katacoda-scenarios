@@ -15,9 +15,9 @@ defaults
         option  dontlognull
 </pre>
 
-The logs for Envoy Proxy follow a cloud native approach, where the application logs are outputted to stdout and stderr.
+The logs for Envoy Proxy follow a cloud-native approach, where the application logs are outputted to *`stdout`* and *`stderr`*.
 
-User access logs are disabled by default and need to be configured. To enable access logs for HTTP requests, include an `access_log` configuration for the HTTP Connection Manager. The path can be either a device, such as stdout, or a file on disk depending on your requirements.
+User access logs are disabled by default and need to be configured. To enable access logs for HTTP requests, include an *`access_log`* configuration for the HTTP Connection Manager. The path can be either a device, such as stdout, or a file on disk depending on your requirements.
 
 <pre class="file" data-target="clipboard">
 access_log:
@@ -26,7 +26,7 @@ access_log:
     path: "/dev/stdout"
 </pre>
 
-For example:
+The results should look like this:
 <pre class="file">
       - name: envoy.http_connection_manager
         config:
@@ -38,7 +38,6 @@ For example:
               path: "/dev/stdout"
           route_config:
 </pre>
-
 
 By default, Envoy has a Format String that includes details of the HTTP request.
 
@@ -61,7 +60,7 @@ access_log:
     format: "[%START_TIME%] "%REQ(:METHOD)% %REQ(X-ENVOY-ORIGINAL-PATH?:PATH)% %PROTOCOL%" %RESPONSE_CODE% %RESP(X-ENVOY-UPSTREAM-SERVICE-TIME)% "%REQ(X-REQUEST-ID)%" "%REQ(:AUTHORITY)%" "%UPSTREAM_HOST%"\n"
 </pre>
 
-The log line can also be outputted as JSON by setting the json_format field, for example:
+The log line can also be outputted as JSON by setting the *json_format* field, for example:
 <pre class="file">
 access_log:
 - name: envoy.file_access_log
