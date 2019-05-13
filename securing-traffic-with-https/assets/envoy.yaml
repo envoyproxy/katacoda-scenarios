@@ -17,7 +17,7 @@ static_resources:
               routes:
               - match:
                   prefix: "/"
-                # TODO: HTTP Redirect
+                #TODO:HTTP-Redirect
           http_filters:
           - name: envoy.router
             config: {}
@@ -48,7 +48,7 @@ static_resources:
           http_filters:
           - name: envoy.router
             config: {}
-      # TODO: TLS Context
+      #TODO:TLS-Context
   clusters:
   - name: service1
     connect_timeout: 0.25s
