@@ -21,8 +21,10 @@ route_config:
 
 This needs to be extended to include the field HTTPS Redirect.
 
-<pre class="file" data-filename="envoy.yaml" data-target="insert" data-marker="#TODO:HTTP-Redirect">
-      https_redirect: true
+<pre class="file" data-filename="envoy.yaml" data-target="insert" data-marker="#TODO:redirect">
+redirect:
+                  path_redirect: "/"
+                  https_redirect: true
 </pre>
 
 When a user visits the HTTP version of the site, Envoy Proxy will match the domain and path based on the filter configuration. This will cause the user to be redirected to the HTTPS version of the site.
