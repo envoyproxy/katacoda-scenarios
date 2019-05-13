@@ -56,7 +56,7 @@ static_resources:
     lb_policy: round_robin
     hosts:
     - socket_address:
-        address: 127.18.0.3
+        address: 172.18.0.3
         port_value: 80
   - name: service2
     connect_timeout: 0.25s
@@ -64,7 +64,7 @@ static_resources:
     lb_policy: round_robin
     hosts:
     - socket_address:
-        address: 127.18.0.4
+        address: 172.18.0.4
         port_value: 80
 
 admin:
