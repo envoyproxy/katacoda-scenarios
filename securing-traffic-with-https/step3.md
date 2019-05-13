@@ -2,7 +2,7 @@ With the TLS Context defined, the site will be able to serve traffic over HTTPS.
 
 ## Edit HTTP Filter
 
-Within our HTTP configuration, as part of the filter match for the domain, a flag of **https_redirect: true** needs to be added to the filter configuration. 
+Within our HTTP configuration, as part of the filter match for the domain, a flag of **https_redirect: true** needs to be added to the filter configuration.
 
 Our standard Envoy Proxy configuration looks like below.
 
@@ -21,7 +21,7 @@ route_config:
 
 This needs to be extended to include the field HTTPS Redirect.
 
-<pre class="file" data-filename="envoy.yaml" data-target="insert" data-marker="# TODO: HTTP Redirect">
+<pre class="file" data-filename="envoy.yaml" data-target="insert" data-marker="#TODO:HTTP-Redirect">
       https_redirect: true
 </pre>
 
