@@ -8,8 +8,8 @@ Open the `envoy.yaml`{{open}} configuration file. It contains an outline of the 
 
 The HTTPS listener has HTTP Connection Manager defined that will proxy incoming requests for `/service/1` and `/service/2` endpoints. This needs to be extended to include the required **tls_context** as shown below.
 
-<pre class="file" data-filename="envoy.yaml" data-target="insert" data-marker="#TODO:TLS-Context">
-      tls_context:
+<pre class="file" data-filename="envoy.yaml" data-target="insert" data-marker="#TODO:TLS">
+tls_context:
         common_tls_context:
           tls_certificates:
             - certificate_chain:
