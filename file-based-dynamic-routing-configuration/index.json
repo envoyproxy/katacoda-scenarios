@@ -42,11 +42,12 @@
     "assets": {
       "host01": [
           {"file": "envoy.yaml", "target": "/root/"},
-          {"file": "envoy-completed.yaml", "target": "/root/"}
-      ]
+          {"file": "envoy-completed.yaml", "target": "/root/"},
+          {"file": "envoy-completed.1.yaml", "target": "/root/"}
+        ]
     }
   },
-  "files": ["eds.conf", "cds.conf"],
+  "files": ["eds.conf", "cds.yaml"],
   "environment": {
     "uilayout": "editor-terminal"
   },
