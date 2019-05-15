@@ -5,15 +5,11 @@
   "details": {
     "steps": [
       {
-        "title": "Envoy Dynamic Routing",
-        "text": "step-explanation.md"
-      },
-      {
-        "title": "Step 1 - Cluster ID",
+        "title": "Envoy Dynamic Configuration",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - EDS Configuration",
+        "title": "Step 2 - Cluster ID",
         "text": "step2.md"
       },
       {
@@ -21,16 +17,24 @@
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Start Envoy",
-        "text": "step-start.md"
+        "title": "Step 4 - EDS Configuration",
+        "text": "step4.md"
       },
       {
-        "title": "Step 5 - Apply Changes",
-        "text": "step-changes.md"
+        "title": "Step 5 - Start Envoy",
+        "text": "step5.md"
       },
       {
-        "title": "Step 6 - CDS Configuration",
-        "text": "step-cds.md"
+        "title": "Step 6 - Apply Changes",
+        "text": "step6.md"
+      },
+      {
+        "title": "Step 7 - CDS Configuration",
+        "text": "step7.md"
+      },
+      {
+        "title": "Step 8 - CDS Apply Changes",
+        "text": "step8.md"
       }
     ],
     "intro": {
@@ -42,11 +46,16 @@
     "assets": {
       "host01": [
           {"file": "envoy.yaml", "target": "/root/"},
-          {"file": "envoy-completed.yaml", "target": "/root/"}
-      ]
+          {"file": "envoy-completed.yaml", "target": "/root/"},
+          {"file": "envoy1.yaml", "target": "/root/"},
+          {"file": "envoy1-completed.yaml", "target": "/root/"},
+          {"file": "eds.conf", "target": "/root/"},
+          {"file": "cds.conf", "target": "/root/"},
+          {"file": "lds.conf", "target": "/root/"}
+        ]
     }
   },
-  "files": ["eds.conf", "cds.conf"],
+  "files": ["eds.conf", "cds.conf", "lds.conf"],
   "environment": {
     "uilayout": "editor-terminal"
   },
