@@ -4,7 +4,7 @@ Open the file `cds.conf`{{open}}.
 
 ## Add new cluster
 
-Replace the configuration with the following to add a new cluster. We'll call this new cluster `newTargetCluster`.
+We'll call this new cluster `newTargetCluster`. Replace the configuration with the following to add a new cluster.
 
 <pre class="file" data-filename="cds.conf" data-target="replace">
 {
@@ -38,8 +38,8 @@ Replace the configuration with the following to add a new cluster. We'll call th
 }
 </pre>
 
-We also need to create the `eds_cluster_config` for this new cluster.
-Create the file `eds1.conf`{{open}}.
+You also need to create the `eds_cluster_config` file for this new cluster.
+Create the file `eds1.conf`{{open}} with this content:
 
 <pre class="file" data-filename="eds1.conf" data-target="replace">
 {
@@ -73,7 +73,7 @@ Create the file `eds1.conf`{{open}}.
 }
 </pre>
 
-And we can use this new cluster, in the listener that we configure previously. Open the file `lds.conf`{{open}}.
+And you can use this new cluster, in the listener that you previously configured. Open the file `lds.conf`{{open}}.
 Replace the target cluster with the name of the new cluster `newTargetCluster`.
 
 <pre class="file" data-target="clipboard">
@@ -82,9 +82,10 @@ Replace the target cluster with the name of the new cluster `newTargetCluster`.
   }
 </pre>
 
-The configuration of `lds.conf` should looks like:
+The configuration of `lds.conf` should look like:
 
 <pre class="file">
+...
             "filter_chains": [
                 {
                     "filters": [
@@ -124,13 +125,16 @@ The configuration of `lds.conf` should looks like:
                     ]
                 }
             ]
+...
 </pre>
 
-Start two HTTP servers to handle the incoming requests for the new cluster:
+Start two HTTP servers to handle the incoming requests for the new cluster
 `docker run -d katacoda/docker-http-server; docker run -d katacoda/docker-http-server;`{{execute}}
 
 Based on how Docker handles file inode tracking, sometimes the filesystem change isn't triggered and detected.
-Force the change with the command `mv cds.conf tmp; mv tmp cds.conf; mv lds.conf tmp; mv tmp lds.conf`{{execute}}
+Force the change with the command: `mv cds.conf tmp; mv tmp cds.conf; mv lds.conf tmp; mv tmp lds.conf`{{execute}}
 
 Envoy should automatically reload the configuration and add the new cluster. You can try running the following command:
 `curl localhost:81`{{execute}}.
+
+You can notice with the response of each request, that the ID of the nodes changes, corresponding to the nodes of `newTargetCluster`.

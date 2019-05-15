@@ -5,7 +5,7 @@
   "details": {
     "steps": [
       {
-        "title": "Envoy Dynamic Routing",
+        "title": "Envoy Dynamic Configuration",
         "text": "step1.md"
       },
       {

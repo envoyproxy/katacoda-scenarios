@@ -1,4 +1,4 @@
-With EDS in place, it's possible to scale up the upstream clusters. If we wanted to be able to dynamically add new domains and clusters, the cluster discovery service (CDS) API needs to be implemented. In the following steps, we are configuring CDS and LDS additionally to EDS previously configured.
+With EDS in place, it's possible to move to scale up the upstream clusters. If we wanted to be able to dynamically add new domains and clusters, the Cluster Discovery Service (CDS) API needs to be implemented. In the following steps, we are configuring the Cluster Discovery Service (CDS) and The Listener Discovery Service (LDS).
 
 You need to create a file to put the configuration for the clusters: `cds.conf`{{open}}.
 
@@ -78,9 +78,11 @@ And also, you need to create a file to put the configuration for the listeners: 
 }
 </pre>
 
-With the externalized the configuration of clusters and listeners, we need to modify our Envoy configuration to make reference to these files. This can be accomplish changing all the `static_resources` for `dynamic_resources`.
+The content of files `cds.conf` and `lds.conf`  is a JSON definition of with the same information defined within our static configuration.
 
-Open the envoy configuration file `envoy1.yaml`{{open}}.
+With the externalized the configuration of clusters and listeners, you need to modify your Envoy's configuration to make reference to these files. This can be accomplish changing all the `static_resources` for `dynamic_resources`.
+
+Open the Envoy configuration file `envoy1.yaml`{{open}}, and add the following configuration:
 
 <pre class="file" data-filename="envoy1.yaml" data-target="append">
 dynamic_resources:
@@ -91,7 +93,6 @@ dynamic_resources:
 </pre>
 
 After that, launch the container with the following command:
-Note: to avoid port conflicts, we exposed the ports with offset 1.
 
 ```
 docker run --name=proxy-eds-cds-lds-filebased -d \
@@ -102,9 +103,8 @@ docker run --name=proxy-eds-cds-lds-filebased -d \
     envoyproxy/envoy:latest
 ```{{execute}}
 
+**Note:** to avoid port conflicts, we exposed the ports with offset 1.
+
 Execute the following command:
 `curl localhost:81`{{execute}}
-
-Based on how Docker handles fle inode tracking, sometimes the inotify filesystem change isn't triggered and detected. Force the change with the command `mv cds.conf tmp; mv tmp cds.conf`{{execute}}
-
 
