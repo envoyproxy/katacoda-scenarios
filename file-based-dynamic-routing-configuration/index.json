@@ -43,11 +43,14 @@
       "host01": [
           {"file": "envoy.yaml", "target": "/root/"},
           {"file": "envoy-completed.yaml", "target": "/root/"},
-          {"file": "envoy-completed.1.yaml", "target": "/root/"}
+          {"file": "envoy-completed.1.yaml", "target": "/root/"},
+          {"file": "eds.conf", "target": "/root/"},
+          {"file": "cds.json", "target": "/root/"},
+          {"file": "lds.json", "target": "/root/"}
         ]
     }
   },
-  "files": ["eds.conf", "cds.yaml"],
+  "files": ["eds.conf", "cds.json", "lds.json"],
   "environment": {
     "uilayout": "editor-terminal"
   },

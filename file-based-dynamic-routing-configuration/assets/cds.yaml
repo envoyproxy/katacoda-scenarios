@@ -1,9 +1,0 @@
-- "@type": type.googleapis.com/envoy.api.v2.Cluster
-  name: targetCluster
-  connect_timeout: 0.25s
-  type: STRICT_DNS
-  lb_policy: ROUND_ROBIN
-  hosts:
-  - socket_address:
-      address: 172.18.0.4
-      port_value: 80
