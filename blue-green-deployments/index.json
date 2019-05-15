@@ -34,6 +34,11 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {"file": "envoy.yaml", "target": "/root/"}
+      ]
     }
   },
   "environment": {
