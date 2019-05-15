@@ -1,15 +1,19 @@
-An initial outline of the Envoy configuration required is available at `envoy.yaml`{{open}}
+In the previous scenarios we've defined the static configuration. However this has made it difficult to reload the configuration when changes are required. To solve this, the static configuration can be defined as **Dynamic Configuration**. With Dynamic Configuration, when changes are made, Envoy will automatically reload the changes and apply them to the configuration and traffic routing.
 
-The first changes required is to add a [Node](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/core/base.proto#core-node). This allows the Envoy node to be identified, potentially allowing for unique configurations to be applied. 
+Envoy supports different parts of the configuration as dynamic. The APIs available are:
 
-## Task
+* **EDS**: The Endpoint Discovery Service (EDS) API provides a way Envoy can discover members of an upstream cluster. This allows you to dynamically add and remove servers handling the traffic.
 
-Prepend the following snippet to the top of the `envoy.yaml`{{open}} file.
+* **CDS**: The Cluster Discovery Service (CDS) API layers on a mechanism by which Envoy can discover upstream clusters used during routing.
 
-<pre class="file" data-filename="envoy.yaml" data-target="prepend">
-node:
-  id: id_1
-  cluster: test
-</pre>
+* **RDS**: The Route Discovery Service (RDS) API layers on a mechanism by which Envoy can discover the entire route configuration for an HTTP connection manager filter at runtime. This would enable concepts such as dynamically changing traffic shifting and blue/green releases.
 
-The API also has support for additional metadata, such as [locality](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/core/base.proto#core-locality) for providing region and zone-based information.
+* **LDS**: The Listener Discovery Service (LDS) layers on a mechanism by which Envoy can discover entire listeners at runtime.
+
+* **SDS**: The Secret Discovery Service (SDS) layers on a mechanism by which Envoy can discover cryptographic secrets (certificate plus private key, TLS session ticket keys) for its listeners, as well as the configuration of peer certificate validation logic (trusted root certs, revocations, etc).
+
+The value for configuration can come from the filesystem, REST-JSON or gRPC endpoints.
+
+More information can be found in the [Envoy documentation overview](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/dynamic_configuration)
+
+In the next steps, we'll change our configuration to use ***Endpoint Discovery Service (EDS)*** allowing nodes to be dynamically added based with data coming from the filesystem.

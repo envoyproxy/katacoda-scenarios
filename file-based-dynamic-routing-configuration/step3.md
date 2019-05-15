@@ -1,29 +1,37 @@
-The contents of `eds.conf`{{open}} is a JSON definition of the same information defined within our static configuration. 
+The EDS configuration is defined to allow the upstream clusters to be controlled dynamically. 
 
-## Task
+Within the static configuration, this was defined as:
 
-Create `eds.conf`{{open}} file with the following content:
-
-<pre class="file" data-filename="eds.conf" data-target="replace">
-{
-  "version_info": "0",
-  "resources": [{
-    "@type": "type.googleapis.com/envoy.api.v2.ClusterLoadAssignment",
-    "cluster_name": "localservices",
-    "endpoints": [{
-      "lb_endpoints": [{
-        "endpoint": {
-          "address": {
-            "socket_address": {
-              "address": "172.18.0.3",
-              "port_value": 80
-            }
-          }
-        }
-      }]
-    }]
-  }]
-}
+<pre class="file">
+  clusters:
+  - name: targetCluster
+    connect_timeout: 0.25s
+    type: STRICT_DNS
+    dns_lookup_family: V4_ONLY
+    lb_policy: ROUND_ROBIN
+    hosts: [
+      { socket_address: { address: 172.18.0.3, port_value: 80 }},
+      { socket_address: { address: 172.18.0.4, port_value: 80 }}
+    ]
 </pre>
 
-This defines a single endpoint at `172.18.0.3`.
+## Convert to EDS
+
+To convert this to EDS based a **eds_cluster_config** is required and changing the type to **EDS**.
+
+Add the following cluster to the end of the Envoy configuration.
+
+<pre class="file" data-filename="envoy.yaml" data-target="append">
+  clusters:
+  - name: targetCluster
+    connect_timeout: 0.25s
+    lb_policy: ROUND_ROBIN
+    type: EDS
+    eds_cluster_config:
+      service_name: localservices
+      eds_config:
+        path: '/etc/envoy/eds.conf'
+
+</pre>
+
+The values for the upstream servers, such as `172.18.0.3` and `172.18.0.4`, will come from the file `eds.conf`{{open}}.
