@@ -4,12 +4,12 @@ At the moment there are two healthy HTTP servers running which Envoy Proxy is lo
 
 ## Task
 
-To make all the HTTP servers unhealthy, run the command `curl 172.18.0.3/unhealthy; curl 172.18.0.4/unhealthy;`{{execute}}. As before, this will trigger an endpoint to cause the HTTP server to fail.
+To make all the HTTP servers unhealthy, run the command `curl 172.18.0.3/unhealthy; curl 172.18.0.4/unhealthy;`{{execute T1}}. As before, this will trigger an endpoint to cause the HTTP server to fail.
 
 ## Envoy Response
 
 Envoy Proxy's configuration has defined two endpoints, but they are now both unavailable.
 
-When new requests come into Envoy, the proxy will return a 503 message with an error relating to upstream servers being unavailable. 
+When new requests come into Envoy, the proxy will return a 503 message with an error relating to upstream servers being unavailable.
 
-`curl localhost -i`{{execute}}
+`curl localhost -i`{{execute T1}}

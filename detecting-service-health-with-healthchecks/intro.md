@@ -2,7 +2,7 @@ In this scenario, you will learn how to add a health check that will check if a 
 
 You will learn how to:
 
-* Add a HTTP health check / Outlier Detection
+* Add a HTTP health check / Outlier Detection.
 
 * Test load balancing options when a service is unavailable.
 

@@ -29,6 +29,6 @@ static_resources:
     dns_lookup_family: V4_ONLY
     lb_policy: ROUND_ROBIN
     hosts: [
-      { socket_address: { address: 172.18.0.3, port_value: 80 }},
-      { socket_address: { address: 172.18.0.4, port_value: 80 }}
+      { socket_address: { address: 172.18.0.5, port_value: 80 }},
+      { socket_address: { address: 172.18.0.6, port_value: 80 }}
     ]
