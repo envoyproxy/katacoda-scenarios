@@ -20,4 +20,4 @@ Replace the string _#TODO Service3_ within the `envoy.yaml`{{open}} file with th
                       weight: 20
 </pre>
 
-The snippet adds the new route with an 80/20 weighting between two different clusters. Within the configuration, the clusters for **service3a** and **service3b** have already been defined. The results should be responses indicating a V1 from `curl 172.18.0.6`{{execute}} and V2 response from `curl 172.18.0.7`{{execute}}.
+The snippet adds the new route with an 80/20 weighting between two different clusters. Within the configuration, the clusters for **service3a** and **service3b** have already been defined. The results should be responses indicating a V2 from `curl 172.18.0.6`{{execute}} and V3 response from `curl 172.18.0.7`{{execute}}.

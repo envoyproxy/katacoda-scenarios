@@ -6,7 +6,7 @@ As we have defined this example using the static API, the proxy needs to be rest
 
 ## Testing
 
-To test the weighted changes, make a series of requests to the newly defined service. You should see two different responses, with most coming from v1 and a smaller number of requests from v2.
+To test the weighted changes, make a series of requests to the newly defined service. You should see two different responses, with most coming from v2 and a smaller number of requests from v3.
 
 `for i in {1..10}; do curl -s http://localhost/service/3; done`{{execute}}
 
