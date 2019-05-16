@@ -27,6 +27,14 @@
       {
         "title": "Step 6 - Total Failure",
         "text": "step6.md"
+      },
+      {
+        "title": "Step 7 - Outlier Detection Configuration",
+        "text": "step7.md"
+      },
+      {
+        "title": "Step 6 - Testing Outlier Detection",
+        "text": "step8.md"
       }
     ],
     "intro": {
@@ -38,6 +46,7 @@
     "assets": {
         "host01": [
             {"file": "envoy.yaml", "target": "/root"},
+            {"file": "envoy1.yaml", "target": "/root"},
             {"file": "envoy-completed.yaml", "target": "/root"}
         ]
     }
