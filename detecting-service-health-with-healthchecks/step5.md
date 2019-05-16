@@ -8,4 +8,4 @@ After a few moments, 10s based on the envoy `internal` value, Envoy should detec
 
 When Envoy Proxy now handles the incoming requests, they should be load balanced across the two services again.
 
-`curl localhost -i`{{execute}}
+`curl localhost -i`{{execute T1}}
