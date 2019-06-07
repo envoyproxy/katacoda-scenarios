@@ -1,0 +1,54 @@
+{
+  "title": "API based dynamic endpoint discovery configuration",
+  "description": "Configure the discovery mechanism based on REST-JSON API used by Envoy to fetch cluster members",
+  "icon": "fa-envoyproxy",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - Introduction",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - EDS Configuration",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - Start upstream services",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Start EDS",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Add endpoint to EDS",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - Delete Endpoint",
+        "text": "step6.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {"file": "envoy.yaml", "target": "/root/"},
+          {"file": "eds_server/main.py", "target": "/root/"},
+          {"file": "eds_server/requirements.txt", "target": "/root/"},
+          {"file": "upstream/server.py", "target": "/root/"},
+          {"file": "upstream/requirements.txt", "target": "/root/"}
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "envoy-docker"
+  }
+}
