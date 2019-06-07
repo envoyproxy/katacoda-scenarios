@@ -1,10 +1,7 @@
-Now you have to start the upstream cluster. For this we are gonna use one example python application:
+Now you have to start the upstream cluster. For this we are gonna use one example application:
 
 ```
-virtualenv env --python=python2.7
-source env/bin/activate
-pip install -r requirements.txt
-python server.py -p 8081
+docker run -p 8081:80 -d katacoda/docker-http-server;
 ```{{execute T2}}
 
 You could test your upstream service executing the following command:
@@ -13,13 +10,12 @@ You could test your upstream service executing the following command:
 The response of the request should be something similar to:
 
 ```
-HTTP/1.0 200 OK
+HTTP/1.1 200 OK
+Date: Fri, 07 Jun 2019 20:01:27 GMT
+Content-Length: 58
 Content-Type: text/html; charset=utf-8
-Content-Length: 36
-Server: Werkzeug/0.15.4 Python/2.7.12
-Date: Fri, 07 Jun 2019 01:43:37 GMT
 
-2823cc11-3140-4944-a921-88ca9a9f2fa3$
+This request was processed by host: 7d047c9bbcb6
 ```
 
 At this point we have the Envoy started, and the upstream cluster started, but they are not connected yet because the *eds_cluster* that we
