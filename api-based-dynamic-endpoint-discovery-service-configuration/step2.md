@@ -1,6 +1,6 @@
 An initial outline of the Envoy configuration required is available at `envoy.yaml`{{open}}
 
-The first changes required is to add a cluster configuration, with type EDS, and indicating that in eds_config should be using the REST API:
+The first change required is to add a cluster configuration, with type EDS, and indicate that in eds_config should be using the REST API:
 
 <pre class="file" data-filename="envoy.yaml" data-target="append">
   clusters:

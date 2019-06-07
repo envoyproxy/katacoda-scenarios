@@ -1,6 +1,6 @@
 ## Delete Endpoint
 
-Ok, so now we've dynamically added in an endpoint...lets remove it by the SDS server's custom API and emptying out its hosts: []
+ We've dynamically added endpoints. Now let's remove them by the EDS server's custom API and emptying out its hosts: []
 
 ```
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
@@ -8,7 +8,7 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
 }' http://localhost:8080/edsservice/myservice
 ```{{execute T7}}
 
-Now is you try to send a request to Envoy, you should see no healthy upstream message from envoy:
+Now, if you try to send a request to Envoy, you will see no healthy upstream message from envoy:
 
 ```curl -v http://localhost:10000```{{execute T7}}
 

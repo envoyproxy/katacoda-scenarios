@@ -3,8 +3,8 @@ The endpoint discovery service (EDS) is a xDS management server based on gRPC or
 
 In this scenario, you will learn how configure the discovery of endpoints using a REST-JSON API. This scenario will explain:
 
-- Configuration of EDS
+- Configuring EDS
 
-- Add endpoints to the cluster using the REST API
+- Adding endpoints to the cluster using the REST API
 
-- Delete endpoints using the REST API
+- Deleting endpoints using the REST API

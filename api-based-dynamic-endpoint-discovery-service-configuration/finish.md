@@ -1,7 +1,7 @@
-In this scenario, you learned how configure the discovery of endpoints using a REST-JSON API. The scenario explained:
+In this scenario, you learned how configure the discovery of endpoints using a REST-JSON API. The scenario covered:
 
-- Configuration of EDS
+- Configuring EDS
 
-- Add aditional endpoints to the cluster using the REST API
+- Adding endpoints to the cluster using the REST API
 
-- Delete endpoints using the REST API
+- Deleting endpoints using the REST API

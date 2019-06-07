@@ -23,9 +23,9 @@ Date: Fri, 07 Jun 2019 01:43:37 GMT
 ```
 
 At this point we have the Envoy started, and the upstream cluster started, but they are not connected yet because the *eds_cluster* that we
-specify in the configuration is not started yet.
+specified in the configuration is not started yet.
 
-If you see the logs of Envoy, you should see errors when Envoy try to fetching the endpoints:
+If you inspect the logs of Envoy, you should see errors when Envoy try to fetching the endpoints:
 
 ```
 [000011][warning][config] [bazel-out/k8-opt/bin/source/common/config/_virtual_includes/http_subscription_lib/common/config/http_subscription_impl.h:101] REST config update failed: fetch failure
