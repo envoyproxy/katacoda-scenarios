@@ -1,4 +1,4 @@
-Now we're ready to add an upstream service configuration to the SDS server.
+Now we're ready to add an upstream service configuration to the EDS server.
 
 ## Create Endpoint
 Since we defined the service as myservice in the envoy_config.yaml, we can need to register an endpoint against it:
@@ -7,8 +7,8 @@ Since we defined the service as myservice in the envoy_config.yaml, we can need 
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "hosts": [
     {
-      "ip_address": "127.0.0.1",
-      "port": 18080,
+      "ip_address": "0.0.0.0",
+      "port": 8081,
       "tags": {
         "az": "us-central1-a",
         "canary": false,
@@ -17,7 +17,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
     }
   ]
 }' http://localhost:8080/edsservice/myservice
-```{{execute}}
+```{{execute T5}}
 
 What this will do is set some endpoints for myservice. Now, envoy will query SDS for membership so on the next poll, you'll see some lines like:
 
@@ -35,7 +35,7 @@ What this will do is set some endpoints for myservice. Now, envoy will query SDS
 Check client connectivity via envoy
 Since we already started the upstream service above, you can connect to it via envoy:
 
-```curl -v https://localhost:10000/```{{execute}}
+```curl -v http://localhost```{{execute T5}}
 
 You should see something similar to:
 

@@ -6,11 +6,11 @@ Ok, so now we've dynamically added in an endpoint...lets remove it by the SDS se
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "hosts": [  ]
 }' http://localhost:8080/edsservice/myservice
-```{{execute}}
+```{{execute T5}}
 
 Now is you try to send a request to Envoy, you should see no healthy upstream message from envoy:
 
-```curl -v https://localhost:10000/```{{execute}}
+```curl -v http://localhost```{{execute T5}}
 
 ```
 < HTTP/1.1 503 Service Unavailable
