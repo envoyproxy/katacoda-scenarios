@@ -16,7 +16,7 @@ The first changes required is to add a cluster configuration, with type EDS, and
           refresh_delay: 5s
 </pre>
 
-Note: ***api_type:*** is set to v2 REST endpoint. If you want to swtich to v1 simply use ***api_type: REST_LEGACY***
+Note: *api_type* is set to v2 REST endpoint. If you want to swtich to v1 simply use *api_type: REST_LEGACY*
 
 After that you need to define how ***eds_cluster*** are resolved. For this example we are gonna use an static configuration:
 

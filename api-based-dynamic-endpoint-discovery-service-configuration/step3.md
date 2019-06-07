@@ -22,7 +22,7 @@ Date: Fri, 07 Jun 2019 01:43:37 GMT
 2823cc11-3140-4944-a921-88ca9a9f2fa3$
 ```
 
-At this point we have the Envoy started, and the upstream cluster started, but they are not connected yet because the eds_server that we
+At this point we have the Envoy started, and the upstream cluster started, but they are not connected yet because the *eds_cluster* that we
 specify in the configuration is not started yet.
 
 If you see the logs of Envoy, you should see errors when Envoy try to fetching the endpoints:

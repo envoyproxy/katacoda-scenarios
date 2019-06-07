@@ -5,6 +5,6 @@ In this scenario, you will learn how configure the discovery of endpoints using 
 
 - Configuration of EDS
 
-- Add aditional endpoints to the cluster using the REST API
+- Add endpoints to the cluster using the REST API
 
 - Delete endpoints using the REST API
