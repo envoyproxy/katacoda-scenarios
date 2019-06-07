@@ -1,7 +1,7 @@
 Now we're ready to add an upstream service configuration to the EDS server.
 
 ## Create Endpoint
-Since we defined the service as myservice in the envoy_config.yaml, we can need to register an endpoint against it:
+Since we defined the service as *myservice* in the envoy_config.yaml, we can need to register an endpoint against it:
 
 ```
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
@@ -42,9 +42,9 @@ With this command you will add 4 more nodes to the upstream cluster:
 ```
 for i in { 8082 8083 8084 8085 }
   do
-  source env/bin/activate;
-  python server.py -p $i &;
-  sleep .5;
+      source env/bin/activate
+      nohup python server.py -p $i &
+      sleep .5
 done
 ```{{execute T5}}
 
@@ -54,7 +54,7 @@ You can verify the new nodes and the corresponding ports with the following comm
 netstat -tnlp
 ```{{execute T5}}
 
-And these nodes should be registered in the eds_server:
+And these nodes should be registered in the eds_cluster:
 
 ```
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
@@ -111,6 +111,6 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
 
 Now you can verify that the traffic is balanced with all the nodes registered with the following command:
 
-`while true; do curl http://localhost:10000; sleep .5; done`{{execute T6}}
+`while true; do curl http://localhost:10000; sleep .5; printf '\n'; done`{{execute T6}}
 
 You will see different responses according to the service that processed the request.
