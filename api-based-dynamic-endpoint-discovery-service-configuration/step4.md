@@ -3,13 +3,10 @@ In order to Envoy fetch the endpoints, we need to start the eds_server. For this
 Now you have to start the upstream cluster. For this we are gonna use one example python application:
 
 ```
-cd assets/upstream/
-virtualenv env --python=python2.7
 source env/bin/activate
 pip install -r requirements.txt
-python server.py -p 8081
-```{{execute}}
-
+python main.py
+```{{execute T4}}
 
 You should see the following output on SDS stdout indicating an inbound Envoy discovery request:
 
@@ -38,4 +35,4 @@ Then on the envoy proxy stdout, something like:
 
 You can verify that envoy doesn't know anything about this endpoint by attempting to connect through to it:
 
-```curl -v https://localhost:10000/```{{execute}}
+```curl -v http://localhost```{{execute T4}}
