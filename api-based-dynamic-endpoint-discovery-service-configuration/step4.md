@@ -1,14 +1,12 @@
 In order to Envoy fetch the endpoints, we need to start the *eds_cluster*. For this example, we will use an [example eds_server](https://github.com/salrashid123/envoy_discovery) implemented in python.
 
-Now you have to start the upstream cluster with the following command:
+Now you have to start the eds_server example with the following command:
 
 ```
-source env/bin/activate
-pip install -r requirements.txt
-python main.py
+docker run -p 8080:8080 -d gsoria/eds_server;
 ```{{execute T4}}
 
-You should see the following output on SDS stdout indicating an inbound Envoy discovery request:
+After the command runs and finish pull the image, you should see the following output on SDS stdout indicating an inbound Envoy discovery request:
 
 ```
 Inbound v2 request for discovery.  POST payload: {u'node': {u'build_version': u'77c59b3e76fcced7f327da3873eb96703eaa49c8/1.9.0-dev/Clean/RELEASE', u'cluster': u'mycluster', u'id': u'test-id'}, u'resource_names': [u'myservice']}
@@ -16,4 +14,4 @@ Inbound v2 request for discovery.  POST payload: {u'node': {u'build_version': u'
 ```
 You can verify that envoy doesn't know anything about this endpoint by attempting to connect through to it:
 
-```curl -v http://localhost:10000```{{execute T5}}
+```curl -v http://localhost```{{execute T5}}

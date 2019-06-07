@@ -22,7 +22,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 ## Check client connectivity via envoy
 Since we already started the upstream service above, you can connect to it via envoy:
 
-```curl -i http://localhost:10000```{{execute T5}}
+```curl -i http://localhost```{{execute T5}}
 
 You should see something similar to:
 
@@ -42,16 +42,9 @@ With this command you will add 4 more nodes to the upstream cluster:
 ```
 for i in { 8082 8083 8084 8085 }
   do
-      source env/bin/activate
-      nohup python server.py -p $i &
+      docker run -p $i:80 -d katacoda/docker-http-server;
       sleep .5
 done
-```{{execute T5}}
-
-You can verify the new nodes and the corresponding ports with the following command:
-
-```
-netstat -tnlp
 ```{{execute T5}}
 
 And these nodes should be registered in the eds_cluster:
@@ -111,6 +104,6 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
 
 Now you can verify that the traffic is balanced with all the nodes registered with the following command:
 
-`while true; do curl http://localhost:10000; sleep .5; printf '\n'; done`{{execute T6}}
+`while true; do curl http://localhost; sleep .5; printf '\n'; done`{{execute T6}}
 
 You will see different responses according to the service that processed the request.

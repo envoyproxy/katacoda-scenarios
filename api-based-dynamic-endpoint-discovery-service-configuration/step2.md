@@ -33,7 +33,6 @@ Launch Envoy with the following command:
 
 ```
 docker run --name=api-eds -d \
-    --network host \
     -p 9901:9901 \
     -p 80:10000 \
     -v /root/:/etc/envoy \
