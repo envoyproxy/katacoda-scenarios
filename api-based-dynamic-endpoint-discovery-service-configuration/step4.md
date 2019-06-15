@@ -3,7 +3,7 @@ In order to Envoy fetch the endpoints, we need to start the *eds_cluster*. For t
 Now you have to start the eds_server example with the following command:
 
 ```
-docker run -p 8080:8080 -d gsoria/eds_server;
+docker run -p 8080:8080 -d katacoda/eds_server;
 ```{{execute T4}}
 
 After the command runs and finish pull the image, you should see the following output on SDS stdout indicating an inbound Envoy discovery request:

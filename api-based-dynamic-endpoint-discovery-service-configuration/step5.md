@@ -42,7 +42,7 @@ With this command you will add 4 more nodes to the upstream cluster:
 ```
 for i in 8082 8083 8084 8085
   do
-      docker run -d -e EDS_SERVER_PORT=$i gsoria/docker-http-server;
+      docker run -d -e EDS_SERVER_PORT=$i katacoda/docker-http-server:v4;
       sleep .5
 done
 ```{{execute T5}}

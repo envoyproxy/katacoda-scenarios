@@ -46,6 +46,11 @@
         "title": "Implementing Metrics and Tracing Capabilities",
         "description": "Gain visibility into production traffic with Metrics and Tracing",
         "external_link": "https://www.envoyproxy.io/try/implementing-metrics-tracing"
+      },
+      {
+        "title": "API based dynamic endpoint discovery configuration",
+        "description": "Configure the discovery mechanism based on REST-JSON API used by Envoy to fetch cluster members",
+        "external_link": "https://www.envoyproxy.io/try/api-based-dynamic-endpoint-discovery-service-configuration"
       }
     ]
   }

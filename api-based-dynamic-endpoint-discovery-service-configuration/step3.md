@@ -1,7 +1,7 @@
 Now you have to start the upstream cluster. For this we are gonna use one example application:
 
 ```
-docker run -p 8081:8081 -d -e EDS_SERVER_PORT='8081' gsoria/docker-http-server
+docker run -p 8081:8081 -d -e EDS_SERVER_PORT='8081' katacoda/docker-http-server:v4
 ```{{execute T2}}
 
 You could test your upstream service executing the following command:
