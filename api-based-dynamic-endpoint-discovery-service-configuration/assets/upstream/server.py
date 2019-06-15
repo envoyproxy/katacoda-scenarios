@@ -1,8 +1,9 @@
-  
+
 from flask import Flask, request, abort
 
 import uuid
 import sys, os, getopt
+import os
 
 app = Flask(__name__)
 
@@ -18,12 +19,13 @@ def index():
 def health():
     print request.headers
     print "/healthz"
-    return "ok"   
+    return "ok"
 
 import sys, getopt
 
 def main(argv):
-   port = 18080
+   eds_port = int(os.environ["EDS_SERVER_PORT"])
+   port = eds_port
    try:
       opts, args = getopt.getopt(argv,"p:",["port="])
    except getopt.GetoptError:
