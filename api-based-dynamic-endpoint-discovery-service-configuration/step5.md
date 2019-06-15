@@ -7,7 +7,7 @@ Since we defined the service as *myservice* in the envoy_config.yaml, we can nee
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
   "hosts": [
     {
-      "ip_address": "0.0.0.0",
+      "ip_address": "172.18.0.3",
       "port": 8081,
       "tags": {
         "az": "us-central1-a",
@@ -40,9 +40,9 @@ Now you can run more nodes in your upstream cluster and register dynamically cal
 With this command you will add 4 more nodes to the upstream cluster:
 
 ```
-for i in { 8082 8083 8084 8085 }
+for i in 8082 8083 8084 8085
   do
-      docker run -p $i:80 -d katacoda/docker-http-server;
+      docker run -d -e EDS_SERVER_PORT=$i gsoria/docker-http-server;
       sleep .5
 done
 ```{{execute T5}}
@@ -53,7 +53,7 @@ And these nodes should be registered in the eds_cluster:
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
     "hosts": [
         {
-        "ip_address": "0.0.0.0",
+        "ip_address": "172.18.0.3",
         "port": 8081,
         "tags": {
             "az": "us-central1-a",
@@ -62,7 +62,7 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
         }
         },
         {
-        "ip_address": "0.0.0.0",
+        "ip_address": "172.18.0.5",
         "port": 8082,
         "tags": {
             "az": "us-central1-a",
@@ -71,7 +71,7 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
         }
         },
         {
-        "ip_address": "0.0.0.0",
+        "ip_address": "172.18.0.6",
         "port": 8083,
         "tags": {
             "az": "us-central1-a",
@@ -80,7 +80,7 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
         }
         },
         {
-        "ip_address": "0.0.0.0",
+        "ip_address": "172.18.0.7",
         "port": 8084,
         "tags": {
             "az": "us-central1-a",
@@ -89,7 +89,7 @@ curl -X PUT --header 'Content-Type: application/json' --header 'Accept: applicat
         }
         },
         {
-        "ip_address": "0.0.0.0",
+        "ip_address": "172.18.0.8",
         "port": 8085,
         "tags": {
             "az": "us-central1-a",

@@ -1,6 +1,4 @@
-## Delete Endpoint
-
- We've dynamically added endpoints. Now let's remove them by the EDS server's custom API and emptying out its hosts: []
+We've dynamically added endpoints. Now let's remove them by the EDS server's custom API and emptying out its hosts: []
 
 ```
 curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{

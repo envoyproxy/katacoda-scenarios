@@ -24,7 +24,7 @@ After that you need to define how ***eds_cluster*** are resolved. For this examp
   - name: eds_cluster
     type: STATIC
     connect_timeout: 0.25s
-    hosts: [{ socket_address: { address: 0.0.0.0, port_value: 8080 }}]
+    hosts: [{ socket_address: { address: 172.18.0.4, port_value: 8080 }}]
 </pre>
 
 ## Task

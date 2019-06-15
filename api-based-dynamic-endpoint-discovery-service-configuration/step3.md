@@ -1,7 +1,7 @@
 Now you have to start the upstream cluster. For this we are gonna use one example application:
 
 ```
-docker run -p 8081:80 -d katacoda/docker-http-server;
+docker run -p 8081:8081 -d -e EDS_SERVER_PORT='8081' gsoria/docker-http-server
 ```{{execute T2}}
 
 You could test your upstream service executing the following command:
@@ -15,7 +15,7 @@ Date: Fri, 07 Jun 2019 20:01:27 GMT
 Content-Length: 58
 Content-Type: text/html; charset=utf-8
 
-This request was processed by host: 7d047c9bbcb6
+a8623918-6c26-41b4-ad4e-d9765e522da4
 ```
 
 At this point we have the Envoy started, and the upstream cluster started, but they are not connected yet because the *eds_cluster* that we

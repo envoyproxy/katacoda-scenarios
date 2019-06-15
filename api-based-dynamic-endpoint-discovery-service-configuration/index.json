@@ -27,6 +27,10 @@
       {
         "title": "Step 6 - Delete Endpoint",
         "text": "step6.md"
+      },
+      {
+        "title": "Step 7 - Disconnect EDS server",
+        "text": "step7.md"
       }
     ],
     "intro": {
