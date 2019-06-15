@@ -61,8 +61,8 @@ Verify if the nodes are responding with this command:
 And then, with this command you can stop and delete the container where the EDS server is running:
 
 ```
-docker ps -a | awk '{ print $1,$2 }' | grep gsoria/eds_server  | awk '{print $1 }' | xargs -I {} docker stop {};
-docker ps -a | awk '{ print $1,$2 }' | grep gsoria/eds_server  | awk '{print $1 }' | xargs -I {} docker rm {}
+docker ps -a | awk '{ print $1,$2 }' | grep katacoda/eds_server  | awk '{print $1 }' | xargs -I {} docker stop {};
+docker ps -a | awk '{ print $1,$2 }' | grep katacoda/eds_server  | awk '{print $1 }' | xargs -I {} docker rm {}
 ```{{execute T7}}
 
 As you can see in the other terminal, Envoy continues response to the requests even when it's disconnected from EDS server.
