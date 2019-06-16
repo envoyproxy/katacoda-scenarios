@@ -26,6 +26,11 @@
         "id": "file-based-dynamic-routing-configuration"
       },
       {
+        "title": "API based dynamic endpoint discovery configuration",
+        "description": "Configure the discovery mechanism based on REST-JSON API used by Envoy to fetch cluster members",
+        "id": "api-based-dynamic-endpoint-discovery-service-configuration"
+      },
+      {
         "title": "Detecting Down Services with Health Checks",
         "description": "Understand how health checks ensure traffic only goes to healthy available services",
         "id": "detecting-service-health-with-healthchecks"
@@ -36,9 +41,9 @@
         "id": "blue-green-deployments"
       },
       {
-        "title": "API based dynamic endpoint discovery configuration",
-        "description": "Configure the discovery mechanism based on REST-JSON API used by Envoy to fetch cluster members",
-        "id": "api-based-dynamic-endpoint-discovery-service-configuration"
+        "title": "Implementing Metrics and Tracing Capabilities",
+        "description": "Gain visibility into production traffic with Metrics and Tracing",
+        "id": "implementing-metrics-tracing"
       }
     ]
   }
