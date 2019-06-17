@@ -30,7 +30,7 @@
       {
         "title": "API Based Dynamic Routing Configuration",
         "description": "Learn how to dynamically update configuration to route traffic driven via an API",
-        "external_link": "https://www.envoyproxy.io/try/api-based-dynamic-endpoint-discovery-service-configuration"
+        "external_link": "https://www.envoyproxy.io/try/api-based-dynamic-routing-configuration"
       },
       {
         "title": "Detecting Down Services with Health Checks",
