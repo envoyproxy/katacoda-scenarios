@@ -2,7 +2,7 @@
   "title": "Implementing Metrics and Tracing Capabilities",
   "description": "Gain visibility into production traffic with Metrics and Tracing",
   "icon": "fa-envoyproxy",
-  "private" true,
+  "private": true,
   "details": {
     "steps": [
       {
