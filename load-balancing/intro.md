@@ -2,12 +2,10 @@ In this scenario you will learn the different load balancing capabilities of Env
 
 The scenario covers:
 
-* Configuring Round Robin load balancing technqiues
+* Learning about the different types of load balancing techniques
+
+* Configuring Round Robin load balancing techniques
 
 * Applying weighting to control load balancing
 
-* Automatically removing unhealthy nodes from selection
-
-* Using Outliner Detection...?
-
-At the end of the scenario, you will have an understanding how to deliver reliable traffic to your services and automatically detect when problems occur for an improved user experience.
+At the end of the scenario, you will have an understanding how to deliver reliable traffic to your services.

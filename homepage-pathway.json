@@ -46,6 +46,16 @@
         "title": "Implementing Metrics and Tracing Capabilities",
         "description": "Gain visibility into production traffic with Metrics and Tracing",
         "external_link": "https://www.envoyproxy.io/try/implementing-metrics-tracing"
+      },
+      {
+        "title": "Debugging Envoy Proxy",
+        "description": "Understand how to identify potential problems",
+        "external_link": "https://www.envoyproxy.io/try/debugging-envoy-proxy"
+      },
+      {
+        "title": "Controlling load balancing policies",
+        "description": "Learn how to configure load balancing techniques",
+        "external_link": "https://www.envoyproxy.io/try/load-balancing"
       }
     ]
   }
