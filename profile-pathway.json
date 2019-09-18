@@ -41,9 +41,19 @@
         "id": "blue-green-deployments"
       },
       {
+        "title": "Controlling load balancing policies",
+        "description": "Learn how to configure load balancing techniques",
+        "id": "load-balancing"
+      },
+      {
         "title": "Implementing Metrics and Tracing Capabilities",
         "description": "Gain visibility into production traffic with Metrics and Tracing",
         "id": "implementing-metrics-tracing"
+      },
+      {
+        "title": "Debugging Envoy Proxy",
+        "description": "Understand how to identify potential problems",
+        "id": "debugging-envoy-proxy"
       }
     ]
   }

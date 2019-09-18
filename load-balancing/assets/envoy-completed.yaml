@@ -1,3 +1,8 @@
+admin:
+  access_log_path: /tmp/admin_access.log
+  address:
+    socket_address: { address: 0.0.0.0, port_value: 9901 }
+
 static_resources:
   listeners:
   - name: listener_0
@@ -28,22 +33,19 @@ static_resources:
     type: STRICT_DNS
     dns_lookup_family: V4_ONLY
     lb_policy: ROUND_ROBIN
-    hosts: [
-      { socket_address: { address: 172.18.0.3, port_value: 80 }},
-      { socket_address: { address: 172.18.0.4, port_value: 80 }}
-    ]
-    health_checks:
-      - timeout: 1s
-        interval: 10s
-        interval_jitter: 1s
-        unhealthy_threshold: 6
-        healthy_threshold: 1
-        http_health_check:
-          path: "/health"
-  tracing:
-    http:
-      name: envoy.zipkin
-      config:
-        collector_cluster: 172.18.0.4
-        collector_endpoint: "/api/v1/spans"
-        shared_span_context: false
+    load_assignment:
+      cluster_name: targetCluster
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                address: 172.18.0.3
+                port_value: 80
+        load_balancing_weight: 90
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                address: 172.18.0.4
+                port_value: 80

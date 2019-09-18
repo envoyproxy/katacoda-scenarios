@@ -9,4 +9,3 @@ scrape_configs:
       - targets: ['172.18.0.2:9901']
         labels:
           group: 'envoy'
-

@@ -4,15 +4,15 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - Load balancing policies",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - Weighted round robin",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Generating Traffic",
         "text": "step3.md"
       }
     ],
@@ -21,6 +21,12 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+        "host01": [
+            {"file": "envoy.yaml", "target": "/root/envoy"},
+            {"file": "envoy-completed.yaml", "target": "/root/envoy"}
+        ]
     }
   },
   "environment": {

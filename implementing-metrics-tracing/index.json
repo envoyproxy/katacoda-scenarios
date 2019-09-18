@@ -2,7 +2,6 @@
   "title": "Implementing Metrics and Tracing Capabilities",
   "description": "Gain visibility into production traffic with Metrics and Tracing",
   "icon": "fa-envoyproxy",
-  "private": true,
   "details": {
     "steps": [
       {
@@ -43,9 +42,9 @@
     },
     "assets": {
         "host01": [
-            {"file": "envoy.yaml", "target": "/root"},
-            {"file": "envoy-completed.yaml", "target": "/root"},
-            {"file": "prometheus.yml", "target": "/root"}
+            {"file": "envoy.yaml", "target": "/root/envoy"},
+            {"file": "envoy-completed.yaml", "target": "/root/envoy"},
+            {"file": "prometheus.yml", "target": "/root/envoy"}
         ]
     }
   },
@@ -57,7 +56,7 @@
       {"name": "Envoy Stats", "href": "https://[[HOST_SUBDOMAIN]]-9901-[[KATACODA_HOST]].environments.katacoda.com/stats/prometheus"},
       {"name": "Jaeger Tracing", "port": 16686}
     ],
-    "uilayout": "terminal-iframe"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "envoy-docker"
