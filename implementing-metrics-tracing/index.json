@@ -56,7 +56,9 @@
       {"name": "Envoy Stats", "href": "https://[[HOST_SUBDOMAIN]]-9901-[[KATACODA_HOST]].environments.katacoda.com/stats/prometheus"},
       {"name": "Jaeger Tracing", "port": 16686}
     ],
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/envoy",
+    "hideuieditortree": true
   },
   "backend": {
     "imageid": "envoy-docker"
