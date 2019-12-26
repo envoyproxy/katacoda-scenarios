@@ -14,6 +14,6 @@ Envoy supports different parts of the configuration as dynamic. The APIs availab
 
 The value for configuration can come from the filesystem, REST-JSON or gRPC endpoints.
 
-More information can be found in the [Envoy documentation overview](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/dynamic_configuration)
+More information can be found in the [xDS configuration API overview](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/operations/dynamic_configuration)
 
 In the next steps, we'll change our configuration to use ***Endpoint Discovery Service (EDS)*** allowing nodes to be dynamically added based with data coming from the filesystem.
