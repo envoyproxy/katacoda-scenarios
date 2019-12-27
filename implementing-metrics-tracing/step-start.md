@@ -1,7 +1,7 @@
 An initial envoy configuration file has been created at
 `envoy.yaml`{{open}}
 
-In this file, it is defined that the server will run with a listener using all network interfaces in port 8080.
+In this file, it is defined that the server will run with a listener using all network interfaces in port 10000.
 
 ```
 - name: listener_0
