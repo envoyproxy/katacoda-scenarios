@@ -16,4 +16,4 @@ The key fields are:
 
 * **base_ejection_time**: The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.
 
-More details on the API can be found at [Envoy documentation](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/outlier?highlight=outlier%20detection).
+More details on the API can be found at [Envoy documentation](https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/cluster/outlier_detection.proto).
