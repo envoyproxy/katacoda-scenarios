@@ -1,5 +1,5 @@
 {
-  "title": "Implementing Blue / Green rollouts",
+  "title": "Implementing Blue / Green Rollouts",
   "description": "Manage Canary releases for your applications using Envoy Proxy",
   "icon": "fa-envoyproxy",
   "details": {
