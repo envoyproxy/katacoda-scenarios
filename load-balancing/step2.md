@@ -6,22 +6,22 @@ Open envoy configuration file `envoy/envoy.yaml`{{open}}
 
 Add to envoy's configuration the definition of `load_assignment`
 <pre class="file" data-filename="envoy.yaml" data-target="append">
-load_assignment:
-  cluster_name: targetCluster
-  endpoints:
-  - lb_endpoints:
-    - endpoint:
-        address:
-          socket_address:
-            address: 172.18.0.3
-            port_value: 80
-    load_balancing_weight: 90
-  - lb_endpoints:
-    - endpoint:
-        address:
-          socket_address:
-            address: 172.18.0.4
-            port_value: 80
+    load_assignment:
+      cluster_name: targetCluster
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                address: 172.18.0.3
+                port_value: 80
+        load_balancing_weight: 90
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                address: 172.18.0.4
+                port_value: 80
 </pre>
 
 
