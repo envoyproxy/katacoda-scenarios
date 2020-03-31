@@ -1,3 +1,4 @@
+from __future__ import print_function
   
 from flask import Flask, request, abort
 from flask_restplus import Api, Resource, fields, marshal
@@ -77,7 +78,7 @@ class Servicesv2(Resource):
     def post(self):
         '''Get hosts for service v2'''
         data = json.loads(request.data)
-        print " Inbound v2 request for discovery.  POST payload: " + str(data)
+        print(" Inbound v2 request for discovery.  POST payload: " + str(data))
         resp = ''
         try:
           id = data['node']["id"]
@@ -136,7 +137,7 @@ class Servicesv1(Resource):
     @api.marshal_with(services)    
     def get(self, service_name):
         '''Get hosts for service v1'''
-        print " Inbound v2 request for discovery.  GET service_name: " + service_name        
+        print(" Inbound v2 request for discovery.  GET service_name: " + service_name)        
         try:
           return DAO.services[service_name]        
         except KeyError: 
